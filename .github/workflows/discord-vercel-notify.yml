@@ -1,0 +1,57 @@
+name: Discord Vercel Notification
+
+on:
+  status
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    # Only run this if the status update is from Vercel and it's not pending
+    if: startsWith(github.event.context, 'vercel/') && github.event.state != 'pending'
+    
+    steps:
+      - name: Send Discord Notification
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const webhookUrl = 'https://discord.com/api/webhooks/1520481764370284698/ilXp4SUMxx4AHpT5scDVA_oK7UqAjOsaPJRYDNcKq6dRUSxmqk_SO04R2hSaCbY86cvp';
+            
+            // github.event.state can be 'success', 'failure', or 'error'
+            const isSuccess = context.payload.state === 'success';
+            
+            // Branch name
+            const branch = context.payload.branches && context.payload.branches.length > 0 
+              ? context.payload.branches[0].name 
+              : 'Unknown Branch';
+              
+            // URL from Vercel
+            const targetUrl = context.payload.target_url || 'https://vercel.com';
+            
+            // Unix Timestamp for <t:TIMESTAMP:F> in Discord
+            const unixTime = Math.floor(Date.now() / 1000);
+            
+            let color = 3066993; // Green
+            let title = "✅ Vercel Deployment Successful";
+            let description = `**Branch:** \`${branch}\`\n**URL:** [View Deployment](${targetUrl})\n**Status:** 🟢 Success\n**Time:** <t:${unixTime}:F>`;
+            
+            if (!isSuccess) {
+              color = 15158332; // Red
+              title = "❌ Vercel Deployment Failed";
+              description = `**Branch:** \`${branch}\`\n**URL:** [View Deployment](${targetUrl})\n**Status:** 🔴 Failed / Error\n**Time:** <t:${unixTime}:F>\n\n**Error Logs:** [View Logs Here](${targetUrl})`;
+            }
+            
+            const payload = {
+              embeds: [{
+                title: title,
+                description: description,
+                color: color
+              }]
+            };
+            
+            await fetch(webhookUrl, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(payload)
+            });
