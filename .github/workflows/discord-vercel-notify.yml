@@ -19,8 +19,24 @@ jobs:
             const state = context.payload.deployment_status.state;
             const isSuccess = state === 'success';
             
-            // The branch name is stored in the deployment payload
-            const branch = context.payload.deployment.ref || 'Unknown Branch';
+            // Try to resolve branch name from the commit SHA
+            let branch = context.payload.deployment.ref || 'Unknown Branch';
+            try {
+              const { data: branches } = await github.rest.repos.listBranchesForHeadCommit({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                commit_sha: context.payload.deployment.sha
+              });
+              if (branches && branches.length > 0) {
+                const mainBranch = branches.find(b => b.name === 'main');
+                branch = mainBranch ? 'main' : branches[0].name;
+              } else {
+                // Fallback to short SHA if no branch matches exactly at HEAD
+                branch = context.payload.deployment.sha.substring(0, 7);
+              }
+            } catch (e) {
+              branch = context.payload.deployment.sha.substring(0, 7);
+            }
               
             // environment_url is the actual website URL (e.g., https://my-app.vercel.app)
             // target_url is the Vercel Dashboard/Logs URL
