@@ -19,23 +19,32 @@ jobs:
             const state = context.payload.deployment_status.state;
             const isSuccess = state === 'success';
             
-            // Try to resolve branch name from the commit SHA
-            let branch = context.payload.deployment.ref || 'Unknown Branch';
-            try {
-              const { data: branches } = await github.rest.repos.listBranchesForHeadCommit({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                commit_sha: context.payload.deployment.sha
-              });
-              if (branches && branches.length > 0) {
-                const mainBranch = branches.find(b => b.name === 'main');
-                branch = mainBranch ? 'main' : branches[0].name;
-              } else {
-                // Fallback to short SHA if no branch matches exactly at HEAD
-                branch = context.payload.deployment.sha.substring(0, 7);
+            const sha = context.payload.deployment?.sha;
+            const ref = context.payload.deployment?.ref;
+            const shortSha = typeof sha === 'string' ? sha.substring(0, 7) : 'Unknown SHA';
+            
+            // Only resolve when the "ref" looks like a SHA; otherwise keep the provided branch/tag name.
+            let branch = ref || 'Unknown Branch';
+            const refLooksLikeSha = typeof ref === 'string' && /^[0-9a-f]{7,40}$/i.test(ref);
+            
+            if (sha && refLooksLikeSha) {
+              try {
+                const { data: branches } = await github.rest.repos.listBranchesForHeadCommit({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  commit_sha: sha
+                });
+                if (Array.isArray(branches) && branches.length > 0) {
+                  const names = branches.map(b => b.name);
+                  branch = names.length === 1 ? names[0] : `${names[0]} (+${names.length - 1} more)`;
+                } else {
+                  branch = shortSha;
+                }
+              } catch (e) {
+                branch = shortSha;
               }
-            } catch (e) {
-              branch = context.payload.deployment.sha.substring(0, 7);
+            } else if (refLooksLikeSha) {
+              branch = shortSha;
             }
               
             // environment_url is the actual website URL (e.g., https://my-app.vercel.app)
