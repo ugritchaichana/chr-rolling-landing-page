@@ -26,7 +26,7 @@ export async function POST(req: Request) {
     const url = `https://${deployment.url}`;
     const deployId = deployment.id;
     // Construct Vercel Dashboard URL for logs
-    const logsUrl = `https://vercel.com/ugritchaichana/chr-rolling-landing-page/${deployId}`;
+    const logsUrl = `https://vercel.com/boothza001s-projects/chr-rolling-landing-page/${deployId}`;
 
     // Calculate Timestamp
     const date = new Date();
