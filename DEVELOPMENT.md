@@ -12,6 +12,7 @@
 *   **Unit Testing**: [Vitest](https://vitest.dev/)
 *   **CI/CD Pipeline**: GitHub Actions (ตรวจสอบ Code ทุกครั้งที่เปิด PR)
 *   **Deployment**: Vercel (โปรดักชัน / Preview Environments)
+*   **Error Tracking**: [Sentry](https://sentry.io/) (ตรวจจับข้อผิดพลาดการใช้งานแบบเรียลไทม์)
 
 ---
 
@@ -27,7 +28,13 @@
     ```
     เข้าใช้งานผ่านเบราว์เซอร์ที่: [http://localhost:3000](http://localhost:3000)
 
-3.  **ตรวจสอบสไตล์โค้ด (Linting)**:
+3.  **ตั้งค่า Environment Variables (ถ้าต้องการเปิดรัน Sentry ท้องถิ่น)**:
+    สร้างไฟล์ `.env.local` ใน Root Directory และกำหนดค่า DSN:
+    ```env
+    NEXT_PUBLIC_SENTRY_DSN=your_sentry_dsn_here
+    ```
+
+4.  **ตรวจสอบสไตล์โค้ด (Linting)**:
     ```bash
     pnpm lint
     ```
