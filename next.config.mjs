@@ -11,8 +11,8 @@ const nextConfig = {
 }
 
 export default withSentryConfig(nextConfig, {
-  org: "chr-rolling",
-  project: "chr-rolling-landing-page",
+  org: "booth-01",
+  project: "javascript-nextjs",
   silent: !process.env.CI,
   widenClientFileUpload: true,
   tunnelRoute: "/monitoring",
