@@ -7,7 +7,7 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     # Only run this if the status update is from Vercel and it's not pending
-    if: startsWith(github.event.context, 'vercel/') && github.event.state != 'pending'
+    if: startsWith(github.event.context, 'Vercel') && github.event.state != 'pending'
     
     steps:
       - name: Send Discord Notification
