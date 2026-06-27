@@ -38,6 +38,8 @@ export const viewport: Viewport = {
   themeColor: '#ffffff',
 }
 
+import { SentryLoader } from './SentryLoader'
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -49,6 +51,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} bg-background`}
     >
       <body className="font-sans antialiased">
+        <SentryLoader />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
