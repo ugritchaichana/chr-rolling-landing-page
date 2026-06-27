@@ -4,12 +4,12 @@ Sentry.init({
   dsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.SENTRY_DSN,
   
   // Adjust this value in production, or use env variables
-  tracesSampleRate: 1.0,
+  tracesSampleRate: process.env.NODE_ENV === "production" ? 0.1 : 1.0,
 
   // Setting this option to true will print useful information to the console regarding SDK integration.
   debug: false,
 
-  replaysOnErrorSampleRate: 1.0,
+  replaysOnErrorSampleRate: process.env.NODE_ENV === "production" ? 0.1 : 1.0,
 
   // This sets the sample rate to be 10%. You may want this to be 100% while
   // in development and sample at a lower rate in production

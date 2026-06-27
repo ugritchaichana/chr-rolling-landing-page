@@ -11,8 +11,8 @@ const nextConfig = {
 }
 
 export default withSentryConfig(nextConfig, {
-  org: "booth-01",
-  project: "javascript-nextjs",
+  org: process.env.SENTRY_ORG || "booth-01",
+  project: process.env.SENTRY_PROJECT || "javascript-nextjs",
   silent: !process.env.CI,
   widenClientFileUpload: true,
   tunnelRoute: "/monitoring",
