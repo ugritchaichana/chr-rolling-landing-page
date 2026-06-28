@@ -1,0 +1,6 @@
+allowBuilds:
+  '@sentry/cli': false
+  sharp: false
+  unrs-resolver: false
+minimumReleaseAgeExclude:
+  - eslint@10.6.0

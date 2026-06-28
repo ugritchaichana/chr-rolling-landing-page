@@ -5,9 +5,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-heading: var(--font-sans);
-  --font-sans: var(--font-geist-sans), 'Geist Fallback';
-  --font-mono: var(--font-geist-mono), 'Geist Mono Fallback';
+  --font-heading: var(--font-ibm-plex-sans-thai), 'sans-serif';
+  --font-sans: var(--font-ibm-plex-sans-thai), 'sans-serif';
+  --font-mono: var(--font-jetbrains-mono), 'monospace';
   --color-brand: var(--brand);
   --color-brand-foreground: var(--brand-foreground);
   --color-brand-red: var(--brand-red);
@@ -50,6 +50,20 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  --color-bg-primary: #F9FAFB;
+  --color-bg-surface: #FFFFFF;
+  --color-text-primary: #1F2937;
+  --color-text-secondary: #6B7280;
+  --color-accent-red: #B82025;
+  --color-accent-red-dark: #9A1A1E;
+  --color-accent-blue: #1F456E;
+  --color-accent-blue-light: #2A5A8F;
+  --color-border-light: #E5E7EB;
+  --color-border-medium: #D1D5DB;
+  --color-industrial-slate: #1E293B;
+  --color-industrial-bg: #0F172A;
+  --color-safety-orange: #F97316;
+  --color-concrete-gray: #64748B;
 }
 
 :root {
@@ -101,5 +115,30 @@
   }
   html {
     @apply font-sans;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 py-16 sm:px-6 lg:px-8 lg:py-24;
+  }
+
+  .section-heading {
+    @apply mb-3 text-3xl font-bold text-accent-blue sm:text-4xl;
+  }
+
+  .section-subheading {
+    @apply mb-10 max-w-2xl text-base text-text-secondary;
+  }
+
+  /* CTA button — primary red */
+  .btn-primary {
+    @apply inline-flex min-h-[48px] items-center justify-center rounded-full bg-accent-red px-8 py-3 font-bold text-white shadow-md transition-all hover:bg-accent-red-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-red focus-visible:ring-offset-2 active:scale-[0.98];
+  }
+
+  /* CTA button — outline */
+  .btn-outline {
+    @apply inline-flex min-h-[48px] items-center justify-center rounded-full border-2 border-accent-blue px-8 py-3 font-bold text-accent-blue transition-all hover:bg-accent-blue hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue focus-visible:ring-offset-2 active:scale-[0.98];
   }
 }
