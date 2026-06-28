@@ -50,7 +50,7 @@ export function SplashScreen() {
         }`}
       >
         <Image
-          src="/images/logo-chp.png"
+          src="/images/logo-chp.webp"
           alt="CHP Rolling Engineering"
           width={240}
           height={68}

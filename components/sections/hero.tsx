@@ -65,7 +65,7 @@ export function Hero() {
         <div className="relative">
           <div className="overflow-hidden rounded-2xl border border-border-light bg-bg-surface shadow-card-hover">
             <Image
-              src="/images/rolling-mill.png"
+              src="/images/rolling-mill.webp"
               alt="CHP blue roll-forming tube mill with polished stainless steel rollers shaping steel strip on the factory floor"
               width={1100}
               height={1400}

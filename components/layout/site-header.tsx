@@ -43,7 +43,7 @@ export function SiteHeader() {
             aria-label="CHP Rolling Engineering home"
           >
             <Image
-              src="/images/logo-chp.png"
+              src="/images/logo-chp.webp"
               alt="CHP Rolling Engineering"
               width={200}
               height={56}
@@ -93,7 +93,7 @@ export function SiteHeader() {
             </a>
 
 
-            <Image src="/images/line-icon.png" alt="LINE" width={70} height={70} className="h-8 w-8 object-contain cursor-pointer hover:scale-110 transition-transform duration-200 hover:shadow-2xl" onClick={() => setLineModalOpen(true)} />
+            <Image src="/images/line-icon.webp" alt="LINE" width={70} height={70} className="h-8 w-8 object-contain cursor-pointer hover:scale-110 transition-transform duration-200 hover:shadow-2xl" onClick={() => setLineModalOpen(true)} />
 
             {/* Language Dropdown */}
             <div
@@ -262,7 +262,7 @@ export function SiteHeader() {
                 className="flex aspect-square h-auto items-center justify-center rounded-xl text-white shadow-sm transition-colors"
                 aria-label="Add on LINE"
               >
-                <Image src="/images/line-icon.png" alt="LINE" width={70} height={70} className="h-15 w-15 object-contain" />
+                <Image src="/images/line-icon.webp" alt="LINE" width={70} height={70} className="h-15 w-15 object-contain" />
               </button>
             </div>
           </nav>
@@ -290,7 +290,7 @@ export function SiteHeader() {
             </button>
 
             <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl text-white overflow-hidden p-2">
-              <Image src="/images/line-icon.png" alt="LINE" width={64} height={64} className="h-full w-full object-contain" />
+              <Image src="/images/line-icon.webp" alt="LINE" width={64} height={64} className="h-full w-full object-contain" />
             </div>
 
             <h3 className="mb-2 text-xl font-bold text-text-primary">เพิ่มเพื่อนผ่าน LINE</h3>

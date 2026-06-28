@@ -196,7 +196,7 @@ export const en: Dictionary = {
         title: "Custom Rolling Tools",
         description:
           "Precision-machined rollers, dies, and forming tools cut to your profile and material, finished to mirror tolerance for tube and pipe mills.",
-        image: "/images/rolling-tools.png",
+        image: "/images/rolling-tools.webp",
         imageAlt:
           "Stacked polished stainless steel custom rolling tools and forming rollers on a workshop pallet",
       },
@@ -204,7 +204,7 @@ export const en: Dictionary = {
         title: "Machine Construction",
         description:
           "Complete roll-forming and tube mill machinery built from the ground up -- stands, drives, and tooling integrated into a ready-to-run line.",
-        image: "/images/rolling-mill.png",
+        image: "/images/rolling-mill.webp",
         imageAlt:
           "Blue CHP roll-forming machine line with stainless steel rollers under assembly",
       },
@@ -212,7 +212,7 @@ export const en: Dictionary = {
         title: "Modification & Overhaul",
         description:
           "Re-machining, refurbishment, and upgrades that restore worn tooling and ageing lines to original spec -- extending the life of your equipment.",
-        image: "/images/machined-dies.png",
+        image: "/images/machined-dies.webp",
         imageAlt:
           "Array of machined steel rolling dies and bearing rings ready for overhaul",
       },
@@ -490,7 +490,7 @@ export const th: Dictionary = {
         title: "ลูกกลิ้งและอุปกรณ์รีดขึ้นรูปตามสั่ง",
         description:
           "ลูกรีด (Rollers) แม่พิมพ์ และเครื่องมือขึ้นรูปที่กลึงด้วยความแม่นยำสูง ตัดตามโปรไฟล์และวัสดุของคุณ ขัดผิวระดับกระจกสำหรับโรงงานผลิตท่อและเหล็กรูปพรรณ",
-        image: "/images/rolling-tools.png",
+        image: "/images/rolling-tools.webp",
         imageAlt:
           "เครื่องมือรีดขึ้นรูปสแตนเลสเรียงซ้อนบนพาเลทในโรงงาน",
       },
@@ -498,7 +498,7 @@ export const th: Dictionary = {
         title: "สร้างเครื่องจักรรีดขึ้นรูป",
         description:
           "สร้างเครื่องจักรขึ้นรูปและโรงงานผลิตท่อเหล็กแบบครบวงจร ประกอบตั้งแต่แท่นรีด (Stands) ระบบขับเคลื่อน และเครื่องมือ พร้อมเดินสายการผลิต",
-        image: "/images/rolling-mill.png",
+        image: "/images/rolling-mill.webp",
         imageAlt:
           "เครื่องจักรขึ้นรูป CHP สีน้ำเงินกำลังประกอบ",
       },
@@ -506,7 +506,7 @@ export const th: Dictionary = {
         title: "ซ่อมบำรุงและดัดแปลง (Overhaul)",
         description:
           "งานกลึงซ่อม ปรับปรุง และอัปเกรดเพื่อฟื้นฟูอุปกรณ์ที่สึกหรอและสายการผลิตเก่าให้กลับมาทำงานได้ตามสเปคเดิม",
-        image: "/images/machined-dies.png",
+        image: "/images/machined-dies.webp",
         imageAlt:
           "แม่พิมพ์เหล็กกลึงและแหวนรองรีดเตรียมซ่อมบำรุง",
       },

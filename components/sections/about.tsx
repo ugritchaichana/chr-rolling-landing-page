@@ -57,8 +57,8 @@ export function About() {
           <div className="relative">
             <div className="overflow-hidden rounded-2xl border border-border-light shadow-card">
               <Image
-                src="/images/machined-dies.png"
-                alt="Close-up of precision machined CHP rolling dies and rings showing mirror finish quality"
+                src="/images/machined-dies.webp"
+                alt="Precision CNC machined rollers for tube mill machinery"
                 width={1100}
                 height={1400}
                 className="h-full max-h-[520px] w-full object-cover"

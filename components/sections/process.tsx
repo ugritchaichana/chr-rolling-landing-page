@@ -27,7 +27,7 @@ export function Process() {
           <div className="order-2 lg:order-1">
             <div className="overflow-hidden rounded-2xl border border-border-light shadow-card">
               <Image
-                src="/images/cnc-lathe.png"
+                src="/images/cnc-lathe.webp"
                 alt="CNC turning lathe with control panel used to machine CHP custom rolling tools"
                 width={1100}
                 height={825}

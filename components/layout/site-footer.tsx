@@ -40,7 +40,7 @@ export function SiteFooter() {
         <div className="grid gap-10 lg:grid-cols-[1.4fr_repeat(3,1fr)]">
           <div className="max-w-sm">
             <Image
-              src="/images/logo-chp.png"
+              src="/images/logo-chp.webp"
               alt="CHP Rolling Engineering"
               width={200}
               height={60}
