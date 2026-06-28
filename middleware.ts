@@ -17,7 +17,7 @@ export function middleware(request: NextRequest) {
     // Determine locale based on Accept-Language
     const acceptLang = request.headers.get('accept-language') || ''
     // Determine locale based on geo (Vercel)
-    const country = request.geo?.country || request.headers.get('x-vercel-ip-country') || ''
+    const country = request.headers.get('x-vercel-ip-country') || ''
     
     let defaultLocale = 'en'
     if (country === 'TH' || acceptLang.toLowerCase().includes('th')) {
