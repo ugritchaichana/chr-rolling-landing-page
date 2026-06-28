@@ -3,7 +3,7 @@ import type { NextRequest } from 'next/server'
 
 const LOCALE_COOKIE = 'chp-locale'
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const response = NextResponse.next()
 
   // Only run for root or specific paths to not mess with static files
