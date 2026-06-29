@@ -90,7 +90,7 @@ export function RfqForm() {
                     {t.rfqForm.contactLocationLabel}
                   </p>
                   <p className="font-medium text-text-primary">
-                    {t.rfqForm.contactLocation}
+                    {t.businessOffice.contactInfo.addressValue}
                   </p>
                 </div>
               </div>
@@ -130,14 +130,13 @@ export function RfqForm() {
                 )}
 
                 <div className="grid gap-5 sm:grid-cols-2">
-                  {/* Full name */}
-                  <div className="flex flex-col gap-1.5">
+                  {/* Name and Company */}
+                  <div className="flex flex-col gap-1.5 sm:col-span-2">
                     <label
                       htmlFor="rfq-name"
                       className="text-sm font-medium text-text-primary"
                     >
-                      {t.rfqForm.fields.name.label}{" "}
-                      <span className="text-accent-red">*</span>
+                      {t.rfqForm.fields.name.label} <span className="text-accent-red">*</span>
                     </label>
                     <input
                       id="rfq-name"
@@ -148,57 +147,37 @@ export function RfqForm() {
                       placeholder={t.rfqForm.fields.name.placeholder}
                     />
                   </div>
-                  {/* Company */}
-                  <div className="flex flex-col gap-1.5">
-                    <label
-                      htmlFor="rfq-company"
-                      className="text-sm font-medium text-text-primary"
-                    >
-                      {t.rfqForm.fields.company.label}{" "}
-                      <span className="text-accent-red">*</span>
-                    </label>
-                    <input
-                      id="rfq-company"
-                      name="company"
-                      required
-                      disabled={formState === "submitting"}
-                      className={fieldClass}
-                      placeholder={t.rfqForm.fields.company.placeholder}
-                    />
-                  </div>
-                  {/* Email */}
-                  <div className="flex flex-col gap-1.5">
-                    <label
-                      htmlFor="rfq-email"
-                      className="text-sm font-medium text-text-primary"
-                    >
-                      {t.rfqForm.fields.email.label}{" "}
-                      <span className="text-accent-red">*</span>
-                    </label>
-                    <input
-                      id="rfq-email"
-                      name="email"
-                      type="email"
-                      required
-                      disabled={formState === "submitting"}
-                      className={fieldClass}
-                      placeholder={t.rfqForm.fields.email.placeholder}
-                    />
-                  </div>
                   {/* Phone */}
                   <div className="flex flex-col gap-1.5">
                     <label
                       htmlFor="rfq-phone"
                       className="text-sm font-medium text-text-primary"
                     >
-                      {t.rfqForm.fields.phone.label}
+                      {t.rfqForm.fields.phone.label} <span className="text-accent-red">*</span>
                     </label>
                     <input
                       id="rfq-phone"
                       name="phone"
+                      required
                       disabled={formState === "submitting"}
                       className={fieldClass}
                       placeholder={t.rfqForm.fields.phone.placeholder}
+                    />
+                  </div>
+                  {/* Line/Email */}
+                  <div className="flex flex-col gap-1.5">
+                    <label
+                      htmlFor="rfq-email"
+                      className="text-sm font-medium text-text-primary"
+                    >
+                      {t.rfqForm.fields.email.label}
+                    </label>
+                    <input
+                      id="rfq-email"
+                      name="email"
+                      disabled={formState === "submitting"}
+                      className={fieldClass}
+                      placeholder={t.rfqForm.fields.email.placeholder}
                     />
                   </div>
                 </div>
@@ -209,44 +188,23 @@ export function RfqForm() {
                     htmlFor="rfq-service"
                     className="text-sm font-medium text-text-primary"
                   >
-                    {t.rfqForm.fields.service.label}
+                    {t.rfqForm.fields.service.label} <span className="text-accent-red">*</span>
                   </label>
                   <select
                     id="rfq-service"
                     name="service"
+                    required
                     disabled={formState === "submitting"}
                     className={fieldClass}
                     defaultValue=""
                   >
                     <option value="" disabled>
-                      {t.rfqForm.fields.service.placeholder}
+                      -- {t.rfqForm.fields.service.placeholder} --
                     </option>
                     {t.rfqForm.fields.service.options.map((opt) => (
-                      <option key={opt} value={opt}>
-                        {opt}
-                      </option>
+                      <option key={opt} value={opt}>{opt}</option>
                     ))}
                   </select>
-                </div>
-
-                {/* Project details */}
-                <div className="flex flex-col gap-1.5">
-                  <label
-                    htmlFor="rfq-details"
-                    className="text-sm font-medium text-text-primary"
-                  >
-                    {t.rfqForm.fields.details.label}{" "}
-                    <span className="text-accent-red">*</span>
-                  </label>
-                  <textarea
-                    id="rfq-details"
-                    name="details"
-                    required
-                    rows={4}
-                    disabled={formState === "submitting"}
-                    className={fieldClass}
-                    placeholder={t.rfqForm.fields.details.placeholder}
-                  />
                 </div>
 
                 {/* File upload */}

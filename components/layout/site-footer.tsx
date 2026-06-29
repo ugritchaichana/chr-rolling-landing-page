@@ -47,8 +47,12 @@ export function SiteFooter() {
               className="h-12 sm:h-20"
               style={{ width: "auto" }}
             />
-            <p className="mt-4 text-pretty leading-relaxed text-text-secondary">
-              {t.footer.description}
+            <p className="mt-4 text-pretty leading-relaxed text-text-secondary font-semibold">
+              ห้างหุ้นส่วนจำกัด ซีเอชพี โรลลิ่ง วิศวกรรม <br/>
+              (CHP ROLLING ENGINEERING LIMITED PARTNERSHIP)
+            </p>
+            <p className="mt-2 text-pretty leading-relaxed text-text-secondary">
+              ที่อยู่สำนักงานติดต่อนัดพบ: 790/77 หมู่ที่ 2 ซอยประชาอุทิศ 90 ถนนประชาอุทิศ ต.บ้านคลองสวน อ.พระสมุทรเจดีย์ จ.สมุทรปราการ 10290
             </p>
           </div>
 
@@ -73,11 +77,10 @@ export function SiteFooter() {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-border-light pt-6 sm:flex-row">
-          <p className="text-sm text-text-secondary">
-            {t.footer.copyright}
+        <div className="mt-12 flex flex-col items-center justify-center gap-3 border-t border-border-light pt-6 sm:flex-row">
+          <p className="text-sm text-text-secondary text-center">
+            © 2026 ห้างหุ้นส่วนจำกัด ซีเอชพี โรลลิ่ง วิศวกรรม. All Rights Reserved.
           </p>
-          <p className="text-sm text-text-secondary">{t.footer.tagline}</p>
         </div>
       </div>
     </footer>

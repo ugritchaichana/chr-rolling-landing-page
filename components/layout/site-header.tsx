@@ -22,11 +22,10 @@ export function SiteHeader() {
   const { locale, t, setLocale } = useLanguage();
 
   const navLinks = [
-    { label: t.nav.capabilities, href: "/capabilities" },
-    { label: t.nav.process, href: "/process" },
-    { label: t.nav.industries, href: "/industries" },
-    { label: t.nav.about, href: "/about" },
-    { label: t.nav.contact, href: "/contact" },
+    { label: locale === "en" ? "Home" : "หน้าแรก", href: "/" },
+    { label: locale === "en" ? "Services" : "สินค้าและบริการ", href: "/services" },
+    { label: locale === "en" ? "About Us" : "เกี่ยวกับเรา", href: "/about" },
+    { label: locale === "en" ? "Contact Us" : "ติดต่อเรา", href: "/contact" },
   ];
 
   return (
@@ -76,18 +75,18 @@ export function SiteHeader() {
           {/* Desktop right: Phone + Line + lang */}
           <div className="hidden items-center gap-4 lg:flex">
             <a
-              href="tel:020268989"
-              className="group flex items-center gap-3 rounded-full border border-border-light bg-bg-surface py-1.5 pl-2 pr-4 shadow-sm transition-all hover:border-accent-red/30 hover:bg-accent-red/5 hover:shadow-md"
+              href="tel:0882299088"
+              className="group flex items-center gap-3 rounded-full border border-border-light bg-bg-surface py-1.5 pl-2 pr-4 shadow-sm transition-all hover:border-accent-blue/30 hover:bg-accent-blue/5 hover:shadow-md"
             >
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-red text-white shadow-sm transition-transform group-hover:scale-105">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-blue text-white shadow-sm transition-transform group-hover:scale-105">
                 <Phone className="h-4 w-4" strokeWidth={2.5} />
               </div>
               <div className="flex flex-col items-start leading-none">
                 <span className="mb-0.5 text-[10px] font-bold uppercase tracking-wider text-text-secondary">
-                  {locale === "en" ? "Talk with our experts" : "ติดต่อสอบถาม"}
+                  {locale === "en" ? "Contact Number" : "เบอร์ติดต่อ"}
                 </span>
-                <span className="font-mono text-sm font-bold text-accent-red transition-colors group-hover:text-accent-red-dark">
-                  02-026-8989
+                <span className="font-mono text-sm font-bold text-accent-blue transition-colors group-hover:text-accent-blue-dark">
+                  088-229-9088
                 </span>
               </div>
             </a>
@@ -247,12 +246,12 @@ export function SiteHeader() {
 
             <div className="mt-4 flex gap-3">
               <a
-                href="tel:020268989"
+                href="tel:0882299088"
                 onClick={() => setMenuOpen(false)}
-                className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-accent-red/10 py-3 text-sm font-bold text-accent-red transition-colors hover:bg-accent-red/20"
+                className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-accent-blue/10 py-3 text-sm font-bold text-accent-blue transition-colors hover:bg-accent-blue/20"
               >
                 <Phone className="h-4 w-4" />
-                02-026-8989
+                {locale === "en" ? "Contact Number" : "เบอร์ติดต่อ"}
               </a>
               <button
                 onClick={() => {

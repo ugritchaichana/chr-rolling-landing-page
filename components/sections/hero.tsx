@@ -6,9 +6,11 @@ import { CheckCircle2, Factory } from "lucide-react";
 
 // TODO: [Phase 2 Hardening] - Replace generated imagery with real factory photos via next/image + AVIF.
 export function Hero() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
-  const headline = t.hero.headlineControl;
+  const headline = locale === "en" ? t.hero.headlineControl : "หจก. ซีเอชพี โรลลิ่ง วิศวกรรม | ผู้เชี่ยวชาญด้านลูกกลิ้งรีดท่อ รีดเหล็ก และเครื่องจักรกลอุตสาหกรรมเฉพาะทาง";
+  const subtitle = locale === "en" ? t.hero.subtitle : "ออกแบบ ผลิต โมดิฟาย และซ่อมบำรุงครบวงจรตั้งแต่ต้นน้ำยันปลายน้ำ โดยทีมวิศวกรประสบการณ์สูง รองรับงานสเปกพิเศษ Made-to-Order 100% มั่นใจได้ในความแม่นยำและการส่งมอบไลน์ผลิตตรงเวลา";
+  const ctaPrimary = locale === "en" ? t.hero.ctaPrimary : "ส่งแบบ Drawing ประเมินราคาฟรี";
 
   return (
     <section
@@ -34,7 +36,7 @@ export function Hero() {
           </h1>
 
           <p className="max-w-xl text-lg leading-relaxed text-text-secondary">
-            {t.hero.subtitle}
+            {subtitle}
           </p>
 
           {/* Highlights */}
@@ -53,10 +55,7 @@ export function Hero() {
           {/* CTA buttons */}
           <div className="flex flex-col gap-3 pt-2 sm:flex-row">
             <a href="#rfq" className="btn-primary">
-              {t.hero.ctaPrimary}
-            </a>
-            <a href="#capabilities" className="btn-outline">
-              {t.hero.ctaSecondary}
+              {ctaPrimary}
             </a>
           </div>
         </div>
@@ -65,8 +64,8 @@ export function Hero() {
         <div className="relative">
           <div className="overflow-hidden rounded-2xl border border-border-light bg-bg-surface shadow-card-hover">
             <Image
-              src="/images/rolling-mill.webp"
-              alt="CHP blue roll-forming tube mill with polished stainless steel rollers shaping steel strip on the factory floor"
+              src="/images/Machine/chp-industrial-rolling-machine-01.webp"
+              alt="เครื่องกลึง CNC ขนาดใหญ่ในโรงงาน หจก ซีเอชพี โรลลิ่ง วิศวกรรม กระบวนการผลิตลูกกลิ้งรีดสเปกพิเศษความแม่นยำสูง"
               width={1100}
               height={1400}
               priority
