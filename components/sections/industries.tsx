@@ -22,9 +22,10 @@ export function Industries() {
             <h2 className="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-text-primary sm:text-4xl">
               {t.industries.heading}
             </h2>
-            <p className="mt-4 leading-relaxed text-text-secondary">
-              {t.industries.subheading}
-            </p>
+            <p 
+              className="mt-4 leading-relaxed text-text-secondary [&>strong]:text-accent-blue [&>strong]:font-bold"
+              dangerouslySetInnerHTML={{ __html: t.industries.subheading }}
+            />
           </div>
 
           {/* Industry grid */}

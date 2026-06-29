@@ -28,9 +28,10 @@ export function Capabilities() {
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-text-primary sm:text-4xl">
             {t.capabilities.heading}
           </h2>
-          <p className="mt-4 text-lg leading-relaxed text-text-secondary">
-            {t.capabilities.subheading}
-          </p>
+          <p 
+            className="mt-4 text-lg leading-relaxed text-text-secondary [&>strong]:text-accent-blue [&>strong]:font-bold"
+            dangerouslySetInnerHTML={{ __html: t.capabilities.subheading }}
+          />
         </div>
 
         <div className="mt-14 grid gap-8 md:grid-cols-3">

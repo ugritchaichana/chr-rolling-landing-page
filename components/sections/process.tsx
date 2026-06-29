@@ -45,9 +45,10 @@ export function Process() {
             <h2 className="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-text-primary sm:text-4xl">
               {t.process.heading}
             </h2>
-            <p className="mt-4 leading-relaxed text-text-secondary">
-              {t.process.subheading}
-            </p>
+            <p 
+              className="mt-4 leading-relaxed text-text-secondary [&>strong]:text-accent-blue [&>strong]:font-bold"
+              dangerouslySetInnerHTML={{ __html: t.process.subheading }}
+            />
 
             <ol className="mt-8 flex flex-col gap-6">
               {t.process.steps.map((step, i) => (

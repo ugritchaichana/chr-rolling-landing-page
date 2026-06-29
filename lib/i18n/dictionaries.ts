@@ -144,6 +144,48 @@ export interface Dictionary {
     copyright: string;
     tagline: string;
   };
+  customRollingTools: {
+    eyebrow: string;
+    heading: string;
+    description: string;
+    items: {
+      title: string;
+      description: string;
+    }[];
+  };
+  machineConstruction: {
+    eyebrow: string;
+    heading: string;
+    description: string;
+    items: {
+      title: string;
+      description: string;
+    }[];
+  };
+  maintenanceOverhaul: {
+    eyebrow: string;
+    heading: string;
+    description: string;
+    items: {
+      title: string;
+      description: string;
+    }[];
+  };
+  businessOffice: {
+    eyebrow: string;
+    heading: string;
+    description1: string;
+    description2: string;
+    contactInfo: {
+      address: string;
+      phone: string;
+      email: string;
+      addressValue: string;
+      phoneValue: string;
+      emailValue: string;
+    };
+    googleMap: string;
+  };
 }
 
 export const en: Dictionary = {
@@ -190,7 +232,7 @@ export const en: Dictionary = {
     eyebrow: "What we do",
     heading: "Engineering capabilities, built around your drawings",
     subheading:
-      "Three core services that take your project from concept to a running production line.",
+      "Three core services that take your project from <strong>concept</strong> to a <strong>running production line</strong>.",
     items: [
       {
         title: "Custom Rolling Tools",
@@ -223,7 +265,7 @@ export const en: Dictionary = {
     eyebrow: "How it works",
     heading: "A clear path from drawing to delivery",
     subheading:
-      "A transparent, engineer-led workflow that keeps procurement teams informed at every stage.",
+      "A <strong>transparent</strong>, <strong>engineer-led</strong> workflow that keeps procurement teams informed <strong>at every stage</strong>.",
     steps: [
       {
         title: "Submit drawings",
@@ -251,7 +293,7 @@ export const en: Dictionary = {
     eyebrow: "Industries served",
     heading: "Trusted by manufacturers who form steel every day",
     subheading:
-      "Wherever metal is rolled, formed, or shaped, our tooling keeps the line running. We supply OEMs and production facilities across a broad range of sectors.",
+      "Wherever metal is rolled, formed, or shaped, our tooling keeps the <strong>line running</strong>. We supply <strong>OEMs</strong> and production facilities across a broad range of sectors.",
     items: [
       "Steel tube & pipe mills",
       "Roll-forming & profile lines",
@@ -267,7 +309,7 @@ export const en: Dictionary = {
     eyebrow: "About CHP",
     heading: "CHP Rolling Engineering Limited Partnership",
     description:
-      "We are a specialist rolling engineering workshop dedicated to custom, made-to-order solutions. Our team combines decades of hands-on forming experience with modern CNC manufacturing to build tooling and machinery that performs exactly as designed.",
+      "We are a specialist rolling engineering workshop dedicated to <strong>custom</strong>, <strong>made-to-order</strong> solutions. Our team combines decades of hands-on forming experience with <strong>modern CNC</strong> manufacturing to build tooling and machinery that performs <strong>exactly as designed</strong>.",
     points: [
       {
         title: "Engineer-led quality",
@@ -370,11 +412,11 @@ export const en: Dictionary = {
     description:
       "Share your blueprints, specifications, or a sample part. Our engineering team will review your requirements and respond with a detailed, made-to-order proposal.",
     contactPhoneLabel: "Call us",
-    contactPhone: "+66 2 000 0000",
+    contactPhone: "088-229-9088",
     contactEmailLabel: "Email",
-    contactEmail: "sales@chprolling.com",
+    contactEmail: "cholla_chat@hotmail.com",
     contactLocationLabel: "Workshop",
-    contactLocation: "Bangkok, Thailand",
+    contactLocation: "Samut Prakan, Thailand",
     fields: {
       name: { label: "Full name", placeholder: "Jane Engineer" },
       company: { label: "Company", placeholder: "Acme Steel Co." },
@@ -429,13 +471,85 @@ export const en: Dictionary = {
     contactHeading: "Contact",
     contactLinks: [
       { label: "Request a Quote", href: "#rfq" },
-      { label: "sales@chprolling.com", href: "mailto:sales@chprolling.com" },
-      { label: "+66 2 000 0000", href: "tel:+6620000000" },
+      { label: "cholla_chat@hotmail.com", href: "mailto:cholla_chat@hotmail.com" },
+      { label: "088-229-9088", href: "tel:+66882299088" },
     ],
     copyright:
       "CHP Rolling Engineering Limited Partnership. All rights reserved.",
     tagline: "Made-to-order industrial solutions",
   },
+  customRollingTools: {
+    eyebrow: "OFFER 1",
+    heading: "Custom-Made Pipe & Tube Roll Forming Tooling",
+    description: "We deliver engineered solutions to solve problems caused by off-spec imported rollers and machinery limitations. By utilizing high-quality Japanese <strong>JIS SKD11</strong> Tool Steel, processed with high-pressure <strong>hardening</strong> and high-precision <strong>CNC grinding</strong>, we achieve the <strong>tightest tolerances</strong>. This guarantees extended tooling lifespan and long-term reduction in <strong>maintenance costs</strong>.",
+    items: [
+      {
+        title: "Pipe Forming Roller",
+        description: "Design, CNC turn, and form rollers for round and square tubes. We maintain exact profile geometries with micron-level precision to ensure smooth forming of steel and stainless steel, minimizing surface scratches."
+      },
+      {
+        title: "Roll Forming Dies",
+        description: "Support complex structural geometries. High-resolution surface grinding ensures stable and consistent cross-sectional dimensions across your entire production line, virtually eliminating dimensional deviations."
+      },
+      {
+        title: "Multi-Stage Rollers",
+        description: "We calculate and engineer comprehensive rolling stages designed to integrate seamlessly with your existing machinery. This systematic approach ensures optimal metal forming without deformation."
+      }
+    ]
+  },
+  machineConstruction: {
+    eyebrow: "OFFER 2",
+    heading: "Hybrid Tube Mill Machinery: 2, 3, and 4-Roll Systems",
+    description: "Elevate your heavy industry production efficiency with our <strong>Hybrid Squeeze Stand</strong> technology. Engineered and manufactured to accommodate variable forming directions, it allows seamless switching between <strong>2-Roll, 3-Roll, and 4-Roll</strong> Squeeze Systems within a single structure. This innovation significantly reduces Capital Expenditure (<strong>CapEx</strong>) and maximizes floor space. Built with heavy-duty structural steel, it is custom-ready for integration into <strong>premium tube and pipe</strong> production lines.",
+    items: [
+      {
+        title: "Multi-Configuration Machine Stands",
+        description: "Heavy-duty machine stands constructed with thick structural steel. Advanced mechanical design ensures symmetrical roller positioning, guaranteeing perfectly squared and highly accurate pipe dimensions."
+      },
+      {
+        title: "Heavy Duty Gear Transmission",
+        description: "High-torque multi-stage gear transmission systems designed to withstand heavy-load compression. Integrates seamlessly with advanced PLC logic controllers for reliable continuous operation."
+      },
+      {
+        title: "Proven Modular Parts",
+        description: "Proven in full-scale on-site commissioning. The shaft support, bearings, and shaft axis feature a modular design for easy assembly and disassembly, engineered to handle extreme mechanical stress and torque."
+      }
+    ]
+  },
+  maintenanceOverhaul: {
+    eyebrow: "OFFER 3",
+    heading: "Comprehensive Overhaul & Maintenance for Roll Forming Machinery",
+    description: "Minimize risk and financial loss from machinery <strong>downtime</strong> and parts scarcity. Our expert engineering team provides rigorous <strong>on-site</strong> mechanical and hydraulic system diagnostics. We design and manufacture <strong>Custom Parts</strong> to replace worn components. We specialize in maintenance, capability expansion (<strong>Modification</strong>), and complete system restoration (<strong>Overhaul</strong>) for all production lines—including proprietary systems and imported machinery (China, Taiwan, Europe)—restoring them to <strong>peak operational performance</strong>.",
+    items: [
+      {
+        title: "Urgent On-Site Diagnostics",
+        description: "Immediate diagnostic services for tolerance deviation. We conduct in-depth analysis of roller shafts and drive systems to precisely and rapidly resolve tube deformation issues."
+      },
+      {
+        title: "Modification & Upgrades",
+        description: "Modify and upgrade existing machinery or production lines to accommodate new roller sizes and adjustable clearances, expanding your manufacturing capabilities without the need for new capital equipment."
+      },
+      {
+        title: "Complete System Overhaul",
+        description: "Comprehensive dismantling, bearing replacement, and restoration of worn shafts. We re-grind all support stands to completely overhaul your production line, restoring micron-level operational accuracy."
+      }
+    ]
+  },
+  businessOffice: {
+    eyebrow: "OFFER 4",
+    heading: "Business Office & Deep Engineering Coordination Center",
+    description1: "Because specialized engineering and <strong>custom-made</strong> manufacturing require <strong>absolute precision</strong>, CHP Rolling Engineering has established a dedicated <strong>Business Office</strong> for seamless coordination with our partners' procurement and engineering teams. This space is designed for intensive meetings, <strong>mechanical drawing</strong> analysis, and meticulous material specification reviews, ensuring <strong>100% alignment</strong> and accuracy before entering actual production.",
+    description2: "We are committed to delivering precise engineering solutions that maximize the return on every investment you make.",
+    contactInfo: {
+      address: "Address",
+      phone: "Phone",
+      email: "Email",
+      addressValue: "790/77 Moo 2, Soi Pracha Uthit 90, Pracha Uthit Rd., Ban Khlong Suan, Phra Samut Chedi, Samut Prakan 10290",
+      phoneValue: "088-229-9088",
+      emailValue: "cholla_chat@hotmail.com"
+    },
+    googleMap: "Google Map Navigation"
+  }
 };
 
 export const th: Dictionary = {
@@ -484,7 +598,7 @@ export const th: Dictionary = {
     eyebrow: "บริการของเรา",
     heading: "ศักยภาพทางวิศวกรรม ตอบโจทย์ทุกแบบร่างของคุณ",
     subheading:
-      "สามบริการหลักที่นำโครงการของคุณจากแนวคิดสู่สายการผลิตจริง",
+      "สามบริการหลักที่นำโครงการของคุณจาก <strong>แนวคิด</strong> สู่ <strong>สายการผลิตจริง</strong>",
     items: [
       {
         title: "ลูกกลิ้งและอุปกรณ์รีดขึ้นรูปตามสั่ง",
@@ -517,7 +631,7 @@ export const th: Dictionary = {
     eyebrow: "กระบวนการทำงาน",
     heading: "เส้นทางชัดเจนจากแบบสู่การส่งมอบ",
     subheading:
-      "กระบวนการทำงานที่โปร่งใส นำโดยวิศวกร อัปเดตทีมจัดซื้อทุกขั้นตอน",
+      "กระบวนการทำงานที่ <strong>โปร่งใส</strong> นำโดย <strong>วิศวกร</strong> อัปเดตทีมจัดซื้อ <strong>ทุกขั้นตอน</strong>",
     steps: [
       {
         title: "ส่งแบบ",
@@ -545,7 +659,7 @@ export const th: Dictionary = {
     eyebrow: "อุตสาหกรรมที่ให้บริการ",
     heading: "ได้รับความไว้วางใจจากผู้ผลิตที่ขึ้นรูปเหล็กทุกวัน",
     subheading:
-      "ไม่ว่าโลหะจะถูกรีดหรือขึ้นรูปด้วยวิธีใด อุปกรณ์ของเราช่วยให้สายการผลิตเดินเครื่องได้อย่างต่อเนื่อง เราส่งมอบอุปกรณ์ให้ OEM และโรงงานผลิตในหลากหลายอุตสาหกรรม",
+      "ไม่ว่าโลหะจะถูกรีดหรือขึ้นรูปด้วยวิธีใด อุปกรณ์ของเราช่วยให้สายการผลิต <strong>เดินเครื่องได้อย่างต่อเนื่อง</strong> เราส่งมอบอุปกรณ์ให้ <strong>OEM</strong> และโรงงานผลิตในหลากหลายอุตสาหกรรม",
     items: [
       "โรงงานผลิตท่อเหล็กและท่อกลม",
       "สายการรีดขึ้นรูปเหล็กรูปพรรณ (Roll-forming)",
@@ -561,7 +675,7 @@ export const th: Dictionary = {
     eyebrow: "เกี่ยวกับ CHP",
     heading: "ห้างหุ้นส่วนจำกัด ซีเอชพี โรลลิ่ง เอ็นจิเนียริ่ง",
     description:
-      "เราเป็นโรงงานวิศวกรรมที่เชี่ยวชาญด้านการผลิตลูกกลิ้งอุตสาหกรรมและงานสั่งผลิตตามแบบ ทีมของเรารวมประสบการณ์การขึ้นรูปโลหะหลายสิบปีเข้ากับการผลิตด้วยเครื่อง CNC สมัยใหม่ เพื่อสร้างเครื่องมือและเครื่องจักรที่ทำงานได้ตรงตามเป้าหมาย",
+      "เราเป็นโรงงานวิศวกรรมที่เชี่ยวชาญด้านการผลิตลูกกลิ้งอุตสาหกรรมและ <strong>งานสั่งผลิตตามแบบ</strong> ทีมของเรารวมประสบการณ์การขึ้นรูปโลหะหลายสิบปีเข้ากับการผลิตด้วย <strong>เครื่อง CNC</strong> สมัยใหม่ เพื่อสร้างเครื่องมือและเครื่องจักรที่ <strong>ทำงานได้ตรงตามเป้าหมาย</strong>",
     points: [
       {
         title: "ควบคุมคุณภาพโดยวิศวกร",
@@ -660,15 +774,15 @@ export const th: Dictionary = {
   },
   rfqForm: {
     eyebrow: "ขอใบเสนอราคา",
-    heading: "ส่งแบบให้เรา -- รับใบเสนอราคาภายใน 48 ชม.",
+    heading: "ส่งแบบให้เรา รับใบเสนอราคาภายใน 48 ชม.",
     description:
       "แชร์แบบพิมพ์เขียว สเปค หรือชิ้นงานตัวอย่าง ทีมวิศวกรจะตรวจสอบความต้องการของคุณและตอบกลับด้วยข้อเสนอสั่งผลิตตามแบบโดยละเอียด",
     contactPhoneLabel: "โทรหาเรา",
-    contactPhone: "+66 2 000 0000",
+    contactPhone: "088-229-9088",
     contactEmailLabel: "อีเมล",
-    contactEmail: "sales@chprolling.com",
+    contactEmail: "cholla_chat@hotmail.com",
     contactLocationLabel: "โรงงาน",
-    contactLocation: "กรุงเทพมหานคร, ประเทศไทย",
+    contactLocation: "สมุทรปราการ, ประเทศไทย",
     fields: {
       name: { label: "ชื่อ-นามสกุล", placeholder: "คุณสมชาย วิศวกร" },
       company: { label: "บริษัท", placeholder: "บริษัท เหล็กไทย จำกัด" },
@@ -726,13 +840,85 @@ export const th: Dictionary = {
     contactHeading: "ติดต่อ",
     contactLinks: [
       { label: "ขอใบเสนอราคา", href: "#rfq" },
-      { label: "sales@chprolling.com", href: "mailto:sales@chprolling.com" },
-      { label: "+66 2 000 0000", href: "tel:+6620000000" },
+      { label: "cholla_chat@hotmail.com", href: "mailto:cholla_chat@hotmail.com" },
+      { label: "088-229-9088", href: "tel:+66882299088" },
     ],
     copyright:
       "CHP Rolling Engineering Limited Partnership. All rights reserved.",
     tagline: "โซลูชันอุตสาหกรรมสั่งผลิตตามแบบ",
   },
+  customRollingTools: {
+    eyebrow: "OFFER 1",
+    heading: "ลูกกลิ้งรีดท่อและรีดเหล็กโครงสร้าง ออกแบบและผลิตตามความต้องการเฉพาะ (Custom-Made) อย่างครบวงจร",
+    description: "เราส่งมอบโซลูชันเพื่อแก้ปัญหาลูกกลิ้งรีดที่ไม่ตรงตามสเปกและข้อจำกัดของเครื่องจักรนำเข้า ด้วยการคัดเลือกวัสดุเหล็กกล้าเครื่องมือคุณภาพสูง เกรด <strong>SKD11 มาตรฐานจากประเทศญี่ปุ่น</strong> ผ่านกระบวนการชุบแข็ง (<strong>Hardening</strong>) ที่ทนต่อแรงบีบอัดระดับสูง พร้อมการขึ้นรูปและเจียรนัยด้วยเทคโนโลยีเครื่องจักรที่มีความแม่นยำสูง (<strong>High Precision</strong>) เพื่อควบคุมพิกัดความเผื่อ (<strong>Tolerance</strong>) ให้น้อยที่สุด ซึ่งจะช่วยยืดอายุการใช้งานและลดต้นทุนการซ่อมบำรุงในระยะยาว",
+    items: [
+      {
+        title: "ลูกกลิ้งรีดท่อเหล็กและสแตนเลส (Pipe Forming Roller)",
+        description: "ออกแบบ กลึง และขึ้นรูปหัวลูกกลิ้งสำหรับรีดท่อกลมและท่อเหลี่ยม ควบคุมองศาหน้าสัมผัส (Profile) ได้อย่างเที่ยงตรงด้วยกระบวนการระดับไมครอน เพื่อการบีบอัดแผ่นเหล็กและสแตนเลสที่ราบรื่น ลดอัตราการเกิดรอยขีดข่วนบนพื้นผิวชิ้นงาน"
+      },
+      {
+        title: "ลูกกลิ้งรีดเหล็กโครงสร้างเฉพาะทาง (Roll Forming Dies)",
+        description: "รองรับการคำนวณโครงสร้างมิติหน้าตัดซับซ้อน (Complex Geometry) ผ่านการเจียรผิวที่มีความละเอียดสูง เพื่อมิติที่เสถียรและสม่ำเสมอในทุกกระบวนการผลิต ลดความคลาดเคลื่อนได้อย่างสมบูรณ์แบบ"
+      },
+      {
+        title: "ชุดลูกกลิ้งรีดสเปกพิเศษหลายสเตจ (Multi-Stage Rollers)",
+        description: "บริการคำนวณและออกแบบลำดับสเตจการรีด (Rolling Stages) เพื่อประสานการทำงานร่วมกับเครื่องจักรเดิมของลูกค้า ช่วยให้การขึ้นรูปเนื้อเหล็กเป็นไปอย่างเป็นระบบและป้องกันการเสียรูปทรง"
+      }
+    ]
+  },
+  machineConstruction: {
+    eyebrow: "OFFER 2",
+    heading: "นวัตกรรมเครื่องจักรรีดท่อระบบ Hybrid ปรับสลับ 2, 3, 4-Roll ได้ในเครื่องเดียว",
+    description: "ยกระดับประสิทธิภาพการผลิตของภาคอุตสาหกรรมหนักด้วยเทคโนโลยี <strong>Hybrid Squeeze Stand</strong> ซึ่งถูกออกแบบและผลิตขึ้นเพื่อรองรับการปรับเปลี่ยนทิศทางการบีบอัด สามารถสลับการทำงานระหว่าง <strong>2-Roll, 3-Roll และ 4-Roll</strong> ได้อย่างสมบูรณ์แบบภายในโครงสร้างเดียว นวัตกรรมนี้ช่วยลดงบประมาณรายจ่ายด้านทุน (<strong>CapEx</strong>) และเพิ่มพื้นที่ใช้สอยในโรงงาน โครงสร้างเหล็กมีความแข็งแรงทนทานสูง พร้อมรองรับการสั่งผลิตเฉพาะเพื่อบูรณาการเข้ากับสายการผลิต <strong>ท่อเหล็กและสแตนเลสระดับพรีเมียม</strong>",
+    items: [
+      {
+        title: "เครื่องจักรรีดท่อระบบ Multi-Configuration",
+        description: "โครงสร้างชุดแท่นเครื่องจักรผลิตด้วยเหล็กหนาพิเศษ เสริมด้วยการออกแบบเชิงวิศวกรรมทางกล (Mechanical Design) เพื่อควบคุมตำแหน่งการจัดวางลูกกลิ้งให้มีความสมมาตร ช่วยให้ผลลัพธ์หน้าตัดท่อมีความแม่นยำและได้ฉากที่สมบูรณ์แบบ"
+      },
+      {
+        title: "ระบบส่งกำลัง Multi-Stage แบบ Heavy Duty",
+        description: "ระบบเกียร์ทดและเพลาส่งกำลังดีไซน์พิเศษสำหรับรับแรงบีบอัดมหาศาล (Heavy Duty Transmission) พร้อมระบบควบคุมด้วยตู้คอนโทรล PLC Logic แม่นยำ เดินเครื่องรันต่อเนื่องได้ไม่มีสะดุด"
+      },
+      {
+        title: "ผลงานการรันระบบจริง และชิ้นส่วน Modular Parts",
+        description: "พิสูจน์แล้วจากการส่งมอบและทำ Commissioning อย่างเต็มรูปแบบ ณ สถานที่ปฏิบัติงาน โครงสร้างชุดประคองเพลา แบริ่ง และแกนเพลา ถูกออกแบบในระบบ Modular ที่ถอดประกอบง่ายและสามารถรองรับแรงบิดและแรงเค้นทางกลได้เต็มประสิทธิภาพ"
+      }
+    ]
+  },
+  maintenanceOverhaul: {
+    eyebrow: "OFFER 3",
+    heading: "บริการฟื้นฟูสมรรถนะ (Overhaul) และซ่อมบำรุงเครื่องจักรรีดท่อทุกประเภท",
+    description: "ลดความเสี่ยงและความสูญเสียจากปัญหาเครื่องจักรหยุดชะงัก (<strong>Downtime</strong>) และข้อจำกัดในการหาอะไหล่ทดแทนสำหรับเครื่องจักรนำเข้า ทีมวิศวกรผู้เชี่ยวชาญจาก หจก. ซีเอชพี พร้อมลงพื้นที่ตรวจสอบระบบทางกลและระบบไฮดรอลิกอย่างละเอียด เราให้บริการออกแบบและผลิตชิ้นส่วนอะไหล่เฉพาะ (<strong>Custom Parts</strong>) เพื่อทดแทนชิ้นส่วนเดิมที่สึกหรอ พร้อมรองรับงานซ่อมบำรุง ดัดแปลงเพื่อเพิ่มประสิทธิภาพ (<strong>Modification</strong>) และงานฟื้นฟูสมรรถนะ (<strong>Overhaul</strong>) สำหรับสายการผลิตทุกรูปแบบ ไม่ว่าจะเป็นเครื่องจักรของเราเอง หรือเครื่องจักรนำเข้าจากต่างประเทศ (จีน, ไต้หวัน, ยุโรป) เพื่อให้เครื่องจักรของคุณกลับมาทำงานด้วยประสิทธิภาพสูงสุดเทียบเท่า <strong>เครื่องจักรใหม่</strong>",
+    items: [
+      {
+        title: "ตรวจสอบและวิเคราะห์การชำรุดด่วนหน้างาน",
+        description: "บริการตรวจสอบพิกัดความเผื่อ (Tolerance) ที่คลาดเคลื่อน พร้อมวิเคราะห์ปัญหาเชิงลึกของระบบเพลารีดและชุดขับเคลื่อน เพื่อแก้ไขปัญหาท่อรีดเสียรูปทรงได้อย่างแม่นยำและทันท่วงที"
+      },
+      {
+        title: "ปรับปรุงและขยายขีดความสามารถ (Modification)",
+        description: "ดัดแปลงและยกระดับประสิทธิภาพสายการผลิตหรือเครื่องจักรเดิม ให้สามารถปรับเปลี่ยนระยะและรองรับลูกกลิ้ง (Roller) ขนาดใหม่ เพื่อตอบสนองความต้องการการผลิตที่หลากหลายโดยไม่ต้องลงทุนซื้อเครื่องจักรใหม่"
+      },
+      {
+        title: "ฟื้นฟูสมรรถนะระบบทางกล (Overhaul)",
+        description: "บริการรื้อถอน ถอดประกอบ เปลี่ยนตลับลูกปืน (Bearing) แกนเพลาที่เสื่อมสภาพ และเจียรผิวแท่นประคองใหม่ทั้งหมด เพื่อฟื้นฟูสายการผลิตให้กลับมาทำงานด้วยความแม่นยำระดับไมครอนอีกครั้ง"
+      }
+    ]
+  },
+  businessOffice: {
+    eyebrow: "OFFER 4",
+    heading: "🏢 สำนักงานนัดหมายเจรจาธุรกิจ และศูนย์ประสานงานวิศวกรรมเชิงลึก",
+    description1: "เนื่องจากงานวิศวกรรมเฉพาะทางและการผลิตชิ้นส่วนสั่งทำพิเศษ (<strong>Custom-Made</strong>) เป็นกระบวนการที่ต้องการ <strong>ความแม่นยำสูง</strong> หจก. ซีเอชพี โรลลิ่ง วิศวกรรม จึงได้จัดเตรียมสำนักงานส่วนหน้า (<strong>Business Office</strong>) เพื่อรองรับการประสานงานกับฝ่ายจัดซื้อและทีมวิศวกรของคู่ค้า พื้นที่นี้ออกแบบมาสำหรับการประชุมหารือ วิเคราะห์แบบ <strong>Drawing เชิงกล</strong> และตรวจสอบสเปกวัสดุร่วมกันอย่างละเอียด เพื่อสร้างความเข้าใจที่ตรงกันและรับประกันความแม่นยำ <strong>100%</strong> ก่อนส่งมอบแผนงานเข้าสู่กระบวนการผลิตจริง",
+    description2: "เรามุ่งมั่นนำเสนอโซลูชันทางวิศวกรรมที่แม่นยำ เพื่อให้ทุกการลงทุนของคุณเกิดความคุ้มค่าสูงสุด",
+    contactInfo: {
+      address: "ที่ตั้งสำนักงาน",
+      phone: "เบอร์โทรศัพท์",
+      email: "อีเมล",
+      addressValue: "790/77 หมู่ที่ 2 ซอยประชาอุทิศ 90 ถนนประชาอุทิศ ต.บ้านคลองสวน อ.พระสมุทรเจดีย์ จ.สมุทรปราการ 10290",
+      phoneValue: "088-229-9088",
+      emailValue: "cholla_chat@hotmail.com"
+    },
+    googleMap: "แผนที่นำทาง (Google Map)"
+  }
 };
 
 export const dictionaries: Record<Locale, Dictionary> = { en, th };

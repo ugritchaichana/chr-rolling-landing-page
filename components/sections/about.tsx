@@ -30,9 +30,10 @@ export function About() {
             <h2 className="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-text-primary sm:text-4xl">
               {t.about.heading}
             </h2>
-            <p className="mt-4 leading-relaxed text-text-secondary">
-              {t.about.description}
-            </p>
+            <p 
+              className="mt-4 leading-relaxed text-text-secondary [&>strong]:text-accent-blue [&>strong]:font-bold"
+              dangerouslySetInnerHTML={{ __html: t.about.description }}
+            />
 
             <div className="mt-8 flex flex-col gap-6">
               {t.about.points.map((point, i) => (
