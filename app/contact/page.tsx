@@ -1,9 +1,10 @@
-import { RfqForm } from "@/components/sections/rfq-form"
+import { ContactPageContent } from "./contact-page-content";
+
+export const metadata = {
+  title: "ติดต่อเรา (Contact Us) | CHP Rolling Engineering",
+  description: "ติดต่อ หจก ซีเอชพี โรลลิ่ง วิศวกรรม เพื่อสอบถามข้อมูล บริการออกแบบลูกกลิ้ง และขอใบเสนอราคา",
+};
 
 export default function ContactPage() {
-  return (
-    <div className="pb-16">
-      <RfqForm />
-    </div>
-  )
+  return <ContactPageContent />;
 }
