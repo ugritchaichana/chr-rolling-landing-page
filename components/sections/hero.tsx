@@ -41,7 +41,7 @@ export function Hero() {
 
           {/* Highlights */}
           <ul className="flex flex-col gap-2">
-            {t.hero.highlights.map((item) => (
+            {t.hero.highlights.map((item: any) => (
               <li
                 key={item}
                 className="flex items-center gap-2.5 text-sm font-medium text-text-primary"

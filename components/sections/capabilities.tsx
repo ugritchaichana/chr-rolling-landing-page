@@ -35,7 +35,7 @@ export function Capabilities() {
         </div>
 
         <div className="mt-14 grid gap-8 md:grid-cols-3">
-          {t.capabilities.items.map((cap, i) => (
+          {t.capabilities.items.map((cap: any, i: number) => (
             <article
               key={cap.title}
               className="group flex flex-col overflow-hidden rounded-2xl border border-border-light bg-bg-surface shadow-card transition-all hover:shadow-card-hover"

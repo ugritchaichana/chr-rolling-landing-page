@@ -201,7 +201,7 @@ export function RfqForm() {
                     <option value="" disabled>
                       -- {t.rfqForm.fields.service.placeholder} --
                     </option>
-                    {t.rfqForm.fields.service.options.map((opt) => (
+                    {t.rfqForm.fields.service.options.map((opt: any) => (
                       <option key={opt} value={opt}>{opt}</option>
                     ))}
                   </select>

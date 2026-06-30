@@ -36,7 +36,7 @@ export function About() {
             />
 
             <div className="mt-8 flex flex-col gap-6">
-              {t.about.points.map((point, i) => (
+              {t.about.points.map((point: any, i: number) => (
                 <div key={point.title} className="flex gap-4">
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-accent-blue/20 bg-accent-blue/5 text-accent-blue">
                     {POINT_ICONS[i]}

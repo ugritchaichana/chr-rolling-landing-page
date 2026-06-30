@@ -9,13 +9,14 @@ import {
   type ReactNode,
 } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import { dictionaries, type Dictionary, type Locale } from "./dictionaries";
+
+export type Locale = "en" | "th";
 
 const LOCALE_COOKIE = "chp-locale";
 
 interface LanguageContextValue {
   locale: Locale;
-  t: Dictionary;
+  t: any;
   setLocale: (locale: Locale) => void;
 }
 
@@ -28,10 +29,12 @@ function storeLocale(locale: Locale): void {
 
 export function LanguageProvider({ 
   children,
-  initialLocale = "en"
+  initialLocale = "en",
+  dictionary
 }: { 
   children: ReactNode;
   initialLocale?: Locale;
+  dictionary: any;
 }) {
   const router = useRouter();
   const pathname = usePathname();
@@ -52,6 +55,9 @@ export function LanguageProvider({
       document.documentElement.lang = newLocale;
     }
 
+    const searchParams = typeof window !== "undefined" ? window.location.search : "";
+    const hash = typeof window !== "undefined" ? window.location.hash : "";
+
     // Redirect to URL with updated locale prefix
     let newPath = pathname;
     if (pathname.startsWith("/en") || pathname.startsWith("/th")) {
@@ -59,12 +65,12 @@ export function LanguageProvider({
     } else {
       newPath = `/${newLocale}${pathname}`;
     }
-    router.push(newPath);
+    router.push(`${newPath}${searchParams}${hash}`);
   }, [pathname, router]);
 
   const value: LanguageContextValue = {
     locale,
-    t: dictionaries[locale],
+    t: dictionary,
     setLocale,
   };
 

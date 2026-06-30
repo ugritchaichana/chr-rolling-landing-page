@@ -3,6 +3,8 @@ import type { Metadata, Viewport } from 'next'
 import { IBM_Plex_Sans_Thai, JetBrains_Mono } from 'next/font/google'
 import '../globals.css'
 import { LanguageProvider } from '@/lib/i18n/language-context'
+import en from '@/lib/i18n/locales/en.json'
+import th from '@/lib/i18n/locales/th.json'
 
 const ibmPlexSansThai = IBM_Plex_Sans_Thai({
   variable: '--font-ibm-plex-sans-thai',
@@ -115,6 +117,10 @@ import { SplashScreen } from '@/components/layout/splash-screen'
 import { SiteHeader } from '@/components/layout/site-header'
 import { SiteFooter } from '@/components/layout/site-footer'
 
+export async function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'th' }]
+}
+
 export default async function RootLayout({
   children,
   params,
@@ -124,6 +130,7 @@ export default async function RootLayout({
 }>) {
   const { locale } = await params
   const initialLocale = (locale === 'th' || locale === 'en') ? locale : 'en'
+  const dictionary = initialLocale === 'th' ? th : en
 
   return (
     <html
@@ -147,7 +154,7 @@ export default async function RootLayout({
       </head>
       <body className="font-sans antialiased">
         <SentryLoader />
-        <LanguageProvider initialLocale={initialLocale as any}>
+        <LanguageProvider initialLocale={initialLocale as any} dictionary={dictionary}>
           <SplashScreen />
           <div className="min-h-screen bg-background text-foreground flex flex-col">
             <SiteHeader />

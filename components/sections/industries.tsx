@@ -30,7 +30,7 @@ export function Industries() {
 
           {/* Industry grid */}
           <div className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border-light bg-border-light sm:grid-cols-2">
-            {t.industries.items.map((industry) => (
+            {t.industries.items.map((industry: any) => (
               <div
                 key={industry}
                 className="flex items-center gap-3 bg-bg-surface px-5 py-4"
