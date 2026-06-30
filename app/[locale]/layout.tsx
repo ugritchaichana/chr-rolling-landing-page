@@ -137,6 +137,7 @@ export default async function RootLayout({
       lang={initialLocale}
       className={`${ibmPlexSansThai.variable} ${jetbrainsMono.variable} bg-background`}
       data-scroll-behavior="smooth"
+      suppressHydrationWarning
     >
       <head>
         <script
