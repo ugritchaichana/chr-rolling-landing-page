@@ -1,27 +1,21 @@
-import { SiteHeader } from "@/components/site-header"
-import { Hero } from "@/components/hero"
-import { TrustBar } from "@/components/trust-bar"
-import { Capabilities } from "@/components/capabilities"
-import { Process } from "@/components/process"
-import { Industries } from "@/components/industries"
-import { About } from "@/components/about"
-import { RfqForm } from "@/components/rfq-form"
-import { SiteFooter } from "@/components/site-footer"
+import { Hero } from "@/components/sections/hero"
+import { TrustBar } from "@/components/sections/trust-bar"
+import { CustomRollingTools } from "@/components/sections/custom-rolling-tools"
+import { CustomMachineConstruction } from "@/components/sections/custom-machine-construction"
+import { MaintenanceOverhaul } from "@/components/sections/maintenance-overhaul"
+import { BusinessOffice } from "@/components/sections/business-office"
+import { RfqForm } from "@/components/sections/rfq-form"
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <SiteHeader />
-      <main>
-        <Hero />
-        <TrustBar />
-        <Capabilities />
-        <Process />
-        <Industries />
-        <About />
-        <RfqForm />
-      </main>
-      <SiteFooter />
-    </div>
+    <>
+      <Hero />
+      <TrustBar />
+      <CustomRollingTools />
+      <CustomMachineConstruction />
+      <MaintenanceOverhaul />
+      <BusinessOffice />
+      <RfqForm />
+    </>
   )
 }
