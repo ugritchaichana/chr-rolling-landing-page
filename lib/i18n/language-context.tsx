@@ -8,6 +8,7 @@ import {
   useEffect,
   type ReactNode,
 } from "react";
+import { useRouter, usePathname } from "next/navigation";
 import { dictionaries, type Dictionary, type Locale } from "./dictionaries";
 
 const LOCALE_COOKIE = "chp-locale";
@@ -20,19 +21,8 @@ interface LanguageContextValue {
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
-function getStoredLocale(): Locale {
-  if (typeof document === "undefined") return "en";
-  const match = document.cookie
-    .split("; ")
-    .find((c) => c.startsWith(`${LOCALE_COOKIE}=`));
-  const val = match?.split("=")[1];
-  if (val === "th" || val === "en") return val;
-  
-  // Fallback if cookie is missing on first client render
-  return navigator.language.toLowerCase().includes("th") ? "th" : "en";
-}
-
 function storeLocale(locale: Locale): void {
+  if (typeof document === "undefined") return;
   document.cookie = `${LOCALE_COOKIE}=${locale};path=/;max-age=${60 * 60 * 24 * 365};samesite=lax`;
 }
 
@@ -43,20 +33,34 @@ export function LanguageProvider({
   children: ReactNode;
   initialLocale?: Locale;
 }) {
+  const router = useRouter();
+  const pathname = usePathname();
   const [locale, setLocaleState] = useState<Locale>(initialLocale);
 
   useEffect(() => {
-    const stored = getStoredLocale();
-    if (stored !== initialLocale) {
-      setLocaleState(stored);
+    setLocaleState(initialLocale);
+    storeLocale(initialLocale);
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = initialLocale;
     }
   }, [initialLocale]);
 
   const setLocale = useCallback((newLocale: Locale) => {
     setLocaleState(newLocale);
     storeLocale(newLocale);
-    document.documentElement.lang = newLocale;
-  }, []);
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = newLocale;
+    }
+
+    // Redirect to URL with updated locale prefix
+    let newPath = pathname;
+    if (pathname.startsWith("/en") || pathname.startsWith("/th")) {
+      newPath = pathname.replace(/^\/(en|th)(\/|$)/, `/${newLocale}$2`);
+    } else {
+      newPath = `/${newLocale}${pathname}`;
+    }
+    router.push(newPath);
+  }, [pathname, router]);
 
   const value: LanguageContextValue = {
     locale,

@@ -5,29 +5,29 @@ import Link from "next/link"
 import Image from "next/image"
 
 export function SiteFooter() {
-  const { t } = useLanguage()
+  const { locale, t } = useLanguage()
 
   const columns = [
     {
       heading: t.footer.capabilitiesHeading,
       links: [
-        { label: t.footer.capabilitiesLinks[0], href: "/capabilities" },
-        { label: t.footer.capabilitiesLinks[1], href: "/capabilities" },
-        { label: t.footer.capabilitiesLinks[2], href: "/capabilities" },
+        { label: t.footer.capabilitiesLinks[0], href: `/${locale}/capabilities` },
+        { label: t.footer.capabilitiesLinks[1], href: `/${locale}/capabilities` },
+        { label: t.footer.capabilitiesLinks[2], href: `/${locale}/capabilities` },
       ],
     },
     {
       heading: t.footer.companyHeading,
       links: [
-        { label: t.footer.companyLinks[0].label, href: "/about" },
-        { label: t.footer.companyLinks[1].label, href: "/process" },
-        { label: t.footer.companyLinks[2].label, href: "/industries" },
+        { label: t.footer.companyLinks[0].label, href: `/${locale}/about` },
+        { label: t.footer.companyLinks[1].label, href: `/${locale}/process` },
+        { label: t.footer.companyLinks[2].label, href: `/${locale}/industries` },
       ],
     },
     {
       heading: t.footer.contactHeading,
       links: [
-        { label: t.footer.contactLinks[0].label, href: "/contact" },
+        { label: t.footer.contactLinks[0].label, href: `/${locale}/contact` },
         { label: t.footer.contactLinks[1].label, href: "mailto:sales@chprolling.com" },
         { label: t.footer.contactLinks[2].label, href: "tel:+6620000000" },
       ],

@@ -22,10 +22,10 @@ export function SiteHeader() {
   const { locale, t, setLocale } = useLanguage();
 
   const navLinks = [
-    { label: locale === "en" ? "Home" : "หน้าแรก", href: "/" },
-    { label: locale === "en" ? "Services" : "สินค้าและบริการ", href: "/services" },
-    { label: locale === "en" ? "About Us" : "เกี่ยวกับเรา", href: "/about" },
-    { label: locale === "en" ? "Contact Us" : "ติดต่อเรา", href: "/contact" },
+    { label: locale === "en" ? "Home" : "หน้าแรก", href: `/${locale}` },
+    { label: locale === "en" ? "Services" : "สินค้าและบริการ", href: `/${locale}/services` },
+    { label: locale === "en" ? "About Us" : "เกี่ยวกับเรา", href: `/${locale}/about` },
+    { label: locale === "en" ? "Contact Us" : "ติดต่อเรา", href: `/${locale}/contact` },
   ];
 
   return (
@@ -37,7 +37,7 @@ export function SiteHeader() {
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* Logo */}
           <Link
-            href="/"
+            href={`/${locale}`}
             className="flex items-center"
             aria-label="CHP Rolling Engineering home"
           >

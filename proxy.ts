@@ -1,38 +1,61 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-const LOCALE_COOKIE = 'chp-locale'
+const locales = ['en', 'th']
+const defaultLocale = 'en'
+
+function getLocale(request: NextRequest): string {
+  // Check cookie
+  const cookieLocale = request.cookies.get('chp-locale')?.value
+  if (cookieLocale && locales.includes(cookieLocale)) {
+    return cookieLocale
+  }
+
+  // Check Accept-Language header
+  const acceptLanguage = request.headers.get('accept-language')
+  if (acceptLanguage && acceptLanguage.toLowerCase().includes('th')) {
+    return 'th'
+  }
+
+  // Determine locale based on geo (Vercel)
+  const country = request.headers.get('x-vercel-ip-country') || ''
+  if (country === 'TH') {
+    return 'th'
+  }
+
+  return defaultLocale
+}
 
 export function proxy(request: NextRequest) {
-  const response = NextResponse.next()
+  const { pathname } = request.nextUrl
 
-  // Only run for root or specific paths to not mess with static files
-  if (request.nextUrl.pathname.startsWith('/_next') || request.nextUrl.pathname.includes('.')) {
-    return response
-  }
+  // Check if pathname already has a locale
+  const pathnameHasLocale = locales.some(
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  )
 
-  // Check if cookie exists
-  const localeCookie = request.cookies.get(LOCALE_COOKIE)
-  if (!localeCookie) {
-    // Determine locale based on Accept-Language
-    const acceptLang = request.headers.get('accept-language') || ''
-    // Determine locale based on geo (Vercel)
-    const country = request.headers.get('x-vercel-ip-country') || ''
-    
-    let defaultLocale = 'en'
-    if (country === 'TH' || acceptLang.toLowerCase().includes('th')) {
-      defaultLocale = 'th'
-    }
-    
-    response.cookies.set(LOCALE_COOKIE, defaultLocale, { path: '/', maxAge: 60 * 60 * 24 * 365, sameSite: 'lax' })
-  }
+  if (pathnameHasLocale) return NextResponse.next()
 
+  // Redirect if there is no locale
+  const locale = getLocale(request)
+  request.nextUrl.pathname = `/${locale}${pathname}`
+  
+  // Return redirect response
+  const response = NextResponse.redirect(request.nextUrl)
+  
+  // Set the cookie on redirect so that it's persisted
+  response.cookies.set('chp-locale', locale, {
+    path: '/',
+    maxAge: 60 * 60 * 24 * 365,
+    sameSite: 'lax',
+  })
+  
   return response
 }
 
 export const config = {
   matcher: [
-    // Skip all internal paths (_next)
-    '/((?!_next|api|favicon.ico).*)',
+    // Skip all internal paths (_next), API routes, and static files containing a dot
+    '/((?!api|_next/static|_next/image|favicon.ico|.*\\..*$).*)',
   ],
 }
