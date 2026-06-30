@@ -51,6 +51,7 @@ export function BusinessOffice() {
               width={800}
               height={600}
               className="h-[400px] w-full object-cover transition-transform duration-500 hover:scale-105"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
         </div>

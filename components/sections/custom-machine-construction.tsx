@@ -37,6 +37,7 @@ export function CustomMachineConstruction() {
                 width={800}
                 height={500}
                 className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
             <div className="flex flex-1 flex-col gap-3 p-8">
@@ -64,6 +65,7 @@ export function CustomMachineConstruction() {
                 width={800}
                 height={500}
                 className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
             <div className="flex flex-1 flex-col gap-3 p-8">

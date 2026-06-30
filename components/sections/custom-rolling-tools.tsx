@@ -46,7 +46,6 @@ export function CustomRollingTools() {
                   alt={item.title}
                   width={600}
                   height={400}
-                  priority={i <= 2}
                   className="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
