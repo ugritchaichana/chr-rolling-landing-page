@@ -108,8 +108,8 @@ export function SiteHeader() {
                 <img
                   src={
                     locale === "en"
-                      ? "https://hatscripts.github.io/circle-flags/flags/gb.svg"
-                      : "https://hatscripts.github.io/circle-flags/flags/th.svg"
+                      ? "/images/FlagIcon/gb.svg"
+                      : "/images/FlagIcon/th.svg"
                   }
                   alt={locale === "en" ? "UK Flag" : "Thai Flag"}
                   className="h-4 w-4 opacity-90"
@@ -129,7 +129,7 @@ export function SiteHeader() {
                   onClick={() => { setLocale("en"); setLangDropdownOpen(false); }}
                   className="flex w-full items-center gap-3 px-4 py-3 text-left font-mono text-sm font-bold transition-colors hover:bg-bg-primary hover:text-accent-blue"
                 >
-                  <img src="https://hatscripts.github.io/circle-flags/flags/gb.svg" alt="UK Flag" className="h-4 w-4 opacity-90" />
+                  <img src="/images/FlagIcon/gb.svg" alt="UK Flag" className="h-4 w-4 opacity-90" />
                   EN
                 </button>
                 <div className="mx-4 border-b border-border-light" />
@@ -138,7 +138,7 @@ export function SiteHeader() {
                   onClick={() => { setLocale("th"); setLangDropdownOpen(false); }}
                   className="flex w-full items-center gap-3 px-4 py-3 text-left font-mono text-sm font-bold transition-colors hover:bg-bg-primary hover:text-accent-blue"
                 >
-                  <img src="https://hatscripts.github.io/circle-flags/flags/th.svg" alt="Thai Flag" className="h-4 w-4 opacity-90" />
+                  <img src="/images/FlagIcon/th.svg" alt="Thai Flag" className="h-4 w-4 opacity-90" />
                   TH
                 </button>
               </div>
@@ -192,8 +192,8 @@ export function SiteHeader() {
                   <img
                     src={
                       locale === "en"
-                        ? "https://hatscripts.github.io/circle-flags/flags/gb.svg"
-                        : "https://hatscripts.github.io/circle-flags/flags/th.svg"
+                        ? "/images/FlagIcon/gb.svg"
+                        : "/images/FlagIcon/th.svg"
                     }
                     alt={locale === "en" ? "UK Flag" : "Thai Flag"}
                     className="h-4 w-4 opacity-90"
@@ -222,7 +222,7 @@ export function SiteHeader() {
                       : "text-text-secondary hover:text-text-primary"
                       }`}
                   >
-                    <img src="https://hatscripts.github.io/circle-flags/flags/gb.svg" alt="UK Flag" className="h-4 w-4 opacity-90" />
+                    <img src="/images/FlagIcon/gb.svg" alt="UK Flag" className="h-4 w-4 opacity-90" />
                     EN - English
                   </button>
                   <button
@@ -237,7 +237,7 @@ export function SiteHeader() {
                       : "text-text-secondary hover:text-text-primary"
                       }`}
                   >
-                    <img src="https://hatscripts.github.io/circle-flags/flags/th.svg" alt="Thai Flag" className="h-4 w-4 opacity-90" />
+                    <img src="/images/FlagIcon/th.svg" alt="Thai Flag" className="h-4 w-4 opacity-90" />
                     TH - ภาษาไทย
                   </button>
                 </div>
