@@ -26,18 +26,37 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params
   const isEn = locale === 'en'
+  const siteUrl = 'https://chp-rolling.com'
   return {
+    metadataBase: new URL(siteUrl),
     title: isEn ? 'Industrial Rollers & Machine Parts | CHP Rolling Engineering' : 'ลูกกลิ้งอุตสาหกรรมและชิ้นส่วนเครื่องจักร | CHP Rolling Engineering',
     description: isEn
       ? 'Experts in custom manufacturing of industrial rollers, machine parts, and CNC turning/milling for private and public sectors.'
       : 'ผู้เชี่ยวชาญด้านการผลิตลูกกลิ้งอุตสาหกรรม ชิ้นส่วนเครื่องจักร งาน CNC สำหรับภาครัฐและเอกชน มาตรฐาน TIS/มอก. และ ISO',
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+      },
+    },
+    alternates: {
+      canonical: `${siteUrl}/${locale}`,
+      languages: {
+        'en': `${siteUrl}/en`,
+        'th': `${siteUrl}/th`,
+      },
+    },
     openGraph: {
-      title: isEn ? 'Industrial Rollers' : 'ลูกกลิ้งอุตสาหกรรม',
+      title: isEn ? 'Industrial Rollers & Machine Parts | CHP Rolling Engineering' : 'ลูกกลิ้งอุตสาหกรรมและชิ้นส่วนเครื่องจักร | CHP Rolling Engineering',
       description: isEn
         ? 'Design and manufacture of custom industrial rollers and machine parts.'
         : 'ออกแบบและผลิตลูกกลิ้งอุตสาหกรรม ชิ้นส่วนเครื่องจักร งาน CNC ตามมาตรฐานวิศวกรรม',
       type: 'website',
       locale: isEn ? 'en_US' : 'th_TH',
+      url: `${siteUrl}/${locale}`,
+      siteName: 'CHP Rolling Engineering',
     },
     icons: {
       icon: [
@@ -69,9 +88,11 @@ const JSON_LD_ORGANIZATION = {
   "@type": "Organization",
   name: "CHP Rolling Engineering Co., Ltd.",
   alternateName: "บริษัท ซีเอชพี โรลลิ่ง วิศวกรรม จำกัด",
+  url: "https://chprolling.co.th",
   description:
     "ผู้เชี่ยวชาญด้านการผลิตลูกกลิ้งอุตสาหกรรม ชิ้นส่วนเครื่องจักร และงาน CNC",
   email: "info@chprolling.co.th",
+  telephone: "+66882299088",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Khlong Luang",
