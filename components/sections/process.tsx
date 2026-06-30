@@ -51,7 +51,7 @@ export function Process() {
             />
 
             <ol className="mt-8 flex flex-col gap-6">
-              {t.process.steps.map((step: any, i: number) => (
+              {t.process.steps.map((step, i) => (
                 <li key={step.title} className="flex gap-4">
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent-blue text-white">
                     {STEP_ICONS[i]}

@@ -35,7 +35,7 @@ export function CustomRollingTools() {
         </div>
 
         <div className="mt-14 grid gap-8 md:grid-cols-3">
-          {dict.items.map((item: any, i: number) => (
+          {dict.items.map((item, i) => (
             <article
               key={item.title}
               className="group flex flex-col overflow-hidden rounded-2xl border border-border-light bg-bg-surface shadow-card transition-all hover:shadow-card-hover"

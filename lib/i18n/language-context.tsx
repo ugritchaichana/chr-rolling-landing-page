@@ -9,14 +9,19 @@ import {
   type ReactNode,
 } from "react";
 import { useRouter, usePathname } from "next/navigation";
+import type en from "./locales/en.json";
 
+/** Locale ที่รองรับ */
 export type Locale = "en" | "th";
+
+/** Type ที่ infer มาจากโครงสร้างของ en.json โดยตรง — ไม่ต้องเขียนเอง */
+export type Dictionary = typeof en;
 
 const LOCALE_COOKIE = "chp-locale";
 
 interface LanguageContextValue {
   locale: Locale;
-  t: any;
+  t: Dictionary;
   setLocale: (locale: Locale) => void;
 }
 
@@ -27,14 +32,14 @@ function storeLocale(locale: Locale): void {
   document.cookie = `${LOCALE_COOKIE}=${locale};path=/;max-age=${60 * 60 * 24 * 365};samesite=lax`;
 }
 
-export function LanguageProvider({ 
+export function LanguageProvider({
   children,
-  initialLocale = "en",
-  dictionary
-}: { 
+  initialLocale = "th",
+  dictionary,
+}: {
   children: ReactNode;
   initialLocale?: Locale;
-  dictionary: any;
+  dictionary: Dictionary;
 }) {
   const router = useRouter();
   const pathname = usePathname();

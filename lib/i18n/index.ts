@@ -1,1 +1,1 @@
-export { LanguageProvider, useLanguage, type Locale } from "./language-context";
+export { LanguageProvider, useLanguage, type Locale, type Dictionary } from "./language-context";

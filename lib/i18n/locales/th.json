@@ -11,30 +11,51 @@
   },
   "hero": {
     "badge": "โรงงานผลิตและซ่อมบำรุงลูกรีดอุตสาหกรรม",
-    "headlineControl": "รับผลิตลูกรีดเหล็กและเครื่องจักรขึ้นรูปโลหะ",
+    "headlineControl": "หจก. ซีเอชพี โรลลิ่ง วิศวกรรม | ผู้เชี่ยวชาญด้านลูกกลิ้งรีดท่อ รีดเหล็ก และเครื่องจักรกลอุตสาหกรรมเฉพาะทาง",
     "headlineIndustrial": "เครื่องมือรีดขึ้นรูปความแม่นยำสูง ผลิตตามแบบของคุณ",
-    "subtitle": "ผู้เชี่ยวชาญด้านการออกแบบ ผลิต กลึง CNC และซ่อมบำรุง (Overhaul) ลูกรีดขึ้นรูปเหล็ก (Roll Forming) และเครื่องรีดท่อ งานคุณภาพสูง พิกัดความเผื่อต่ำ สั่งทำตามแบบ Drawing ของคุณ 100%",
+    "subtitle": "ออกแบบ ผลิต โมดิฟาย และซ่อมบำรุงครบวงจรตั้งแต่ต้นน้ำยันปลายน้ำ โดยทีมวิศวกรประสบการณ์สูง รองรับงานสเปกพิเศษ Made-to-Order 100% มั่นใจได้ในความแม่นยำและการส่งมอบไลน์ผลิตตรงเวลา",
     "highlights": [
       "รับถอดแบบและสั่งผลิตลูกรีดตามสเปค (Custom Rollers)",
       "กลึง CNC เจียร และชุบแข็งครบจบในโรงงานเดียว",
       "รับสร้างเครื่องรีดท่อและเครื่องจักรขึ้นรูปโลหะครบวงจร"
     ],
-    "ctaPrimary": "ขอใบเสนอราคา",
+    "ctaPrimary": "ส่งแบบ Drawing ประเมินราคาฟรี",
     "ctaSecondary": "ดูบริการของเรา",
     "yearsValue": "25+",
     "yearsLabel": "ปีการันตีความเชี่ยวชาญ",
     "stats": {
-      "experience": { "value": "15+", "label": "ปีประสบการณ์" },
-      "projects": { "value": "500+", "label": "โครงการที่ส่งมอบ" },
-      "clients": { "value": "50+", "label": "ลูกค้าภาครัฐและเอกชน" }
+      "experience": {
+        "value": "15+",
+        "label": "ปีประสบการณ์"
+      },
+      "projects": {
+        "value": "500+",
+        "label": "โครงการที่ส่งมอบ"
+      },
+      "clients": {
+        "value": "50+",
+        "label": "ลูกค้าภาครัฐและเอกชน"
+      }
     }
   },
   "trustBar": {
     "items": [
-      { "value": "100%", "label": "ผลิตตามสั่ง 100%" },
-      { "value": "+/-0.01mm", "label": "พิกัดความเผื่อ (Tolerance)" },
-      { "value": "48h", "label": "จัดทำใบเสนอราคาใน" },
-      { "value": "ISO", "label": "มาตรฐานควบคุมคุณภาพ" }
+      {
+        "value": "100%",
+        "label": "ผลิตตามสั่ง 100%"
+      },
+      {
+        "value": "+/-0.01mm",
+        "label": "พิกัดความเผื่อ (Tolerance)"
+      },
+      {
+        "value": "48h",
+        "label": "จัดทำใบเสนอราคาใน"
+      },
+      {
+        "value": "ISO",
+        "label": "มาตรฐานควบคุมคุณภาพ"
+      }
     ]
   },
   "capabilities": {
@@ -123,24 +144,60 @@
   "certifications": {
     "heading": "มาตรฐานและใบรับรอง",
     "items": [
-      { "code": "TIS / มอก.", "label": "มาตรฐานผลิตภัณฑ์อุตสาหกรรม" },
-      { "code": "ISO 9001:2015", "label": "ระบบบริหารคุณภาพ" },
-      { "code": "ISO 14001:2015", "label": "ระบบจัดการสิ่งแวดล้อม" }
+      {
+        "code": "TIS / มอก.",
+        "label": "มาตรฐานผลิตภัณฑ์อุตสาหกรรม"
+      },
+      {
+        "code": "ISO 9001:2015",
+        "label": "ระบบบริหารคุณภาพ"
+      },
+      {
+        "code": "ISO 14001:2015",
+        "label": "ระบบจัดการสิ่งแวดล้อม"
+      }
     ]
   },
   "specs": {
     "heading": "สเปคทางเทคนิค",
     "subheading": "ข้อมูลทางเทคนิคของลูกกลิ้งอุตสาหกรรมและชิ้นส่วนเครื่องจักร ทุกชิ้นงานผ่านการตรวจสอบคุณภาพตามมาตรฐาน",
-    "tableHeaders": { "item": "รายการ", "value": "ค่า / ช่วง" },
+    "tableHeaders": {
+      "item": "รายการ",
+      "value": "ค่า / ช่วง"
+    },
     "rows": [
-      { "label": "เส้นผ่านศูนย์กลาง", "value": "50 - 1,200 mm" },
-      { "label": "ความยาวสูงสุด", "value": "6,000 mm" },
-      { "label": "วัสดุ", "value": "SCM440, S45C, SUS304, SUS316" },
-      { "label": "ความแข็ง", "value": "HRC 45-62" },
-      { "label": "ค่าความเรียบผิว (Ra)", "value": "0.4 - 3.2 um" },
-      { "label": "พิกัดความเผื่อ (Tolerance)", "value": "+/- 0.01 mm" },
-      { "label": "กำลังการผลิต", "value": "500+ ชิ้น/เดือน" },
-      { "label": "ระยะเวลาส่งมอบ", "value": "7-30 วันทำการ" }
+      {
+        "label": "เส้นผ่านศูนย์กลาง",
+        "value": "50 - 1,200 mm"
+      },
+      {
+        "label": "ความยาวสูงสุด",
+        "value": "6,000 mm"
+      },
+      {
+        "label": "วัสดุ",
+        "value": "SCM440, S45C, SUS304, SUS316"
+      },
+      {
+        "label": "ความแข็ง",
+        "value": "HRC 45-62"
+      },
+      {
+        "label": "ค่าความเรียบผิว (Ra)",
+        "value": "0.4 - 3.2 um"
+      },
+      {
+        "label": "พิกัดความเผื่อ (Tolerance)",
+        "value": "+/- 0.01 mm"
+      },
+      {
+        "label": "กำลังการผลิต",
+        "value": "500+ ชิ้น/เดือน"
+      },
+      {
+        "label": "ระยะเวลาส่งมอบ",
+        "value": "7-30 วันทำการ"
+      }
     ]
   },
   "inlineCta": {
@@ -207,10 +264,22 @@
     "contactLocationLabel": "โรงงาน",
     "contactLocation": "สมุทรปราการ, ประเทศไทย",
     "fields": {
-      "name": { "label": "ชื่อ-นามสกุล", "placeholder": "คุณสมชาย วิศวกร" },
-      "company": { "label": "บริษัท", "placeholder": "บริษัท เหล็กไทย จำกัด" },
-      "email": { "label": "อีเมลบริษัท", "placeholder": "somchai@thaisteelco.com" },
-      "phone": { "label": "เบอร์โทร", "placeholder": "+66 ..." },
+      "name": {
+        "label": "ชื่อ-นามสกุล",
+        "placeholder": "คุณสมชาย วิศวกร"
+      },
+      "company": {
+        "label": "บริษัท",
+        "placeholder": "บริษัท เหล็กไทย จำกัด"
+      },
+      "email": {
+        "label": "อีเมลบริษัท",
+        "placeholder": "somchai@thaisteelco.com"
+      },
+      "phone": {
+        "label": "เบอร์โทร",
+        "placeholder": "+66 ..."
+      },
       "service": {
         "label": "บริการที่ต้องการ",
         "placeholder": "เลือกบริการ",
@@ -249,15 +318,33 @@
     ],
     "companyHeading": "บริษัท",
     "companyLinks": [
-      { "label": "เกี่ยวกับ CHP", "href": "#about" },
-      { "label": "กระบวนการ", "href": "#process" },
-      { "label": "อุตสาหกรรม", "href": "#industries" }
+      {
+        "label": "เกี่ยวกับ CHP",
+        "href": "#about"
+      },
+      {
+        "label": "กระบวนการ",
+        "href": "#process"
+      },
+      {
+        "label": "อุตสาหกรรม",
+        "href": "#industries"
+      }
     ],
     "contactHeading": "ติดต่อ",
     "contactLinks": [
-      { "label": "ขอใบเสนอราคา", "href": "#rfq" },
-      { "label": "cholla_chat@hotmail.com", "href": "mailto:cholla_chat@hotmail.com" },
-      { "label": "088-229-9088", "href": "tel:+66882299088" }
+      {
+        "label": "ขอใบเสนอราคา",
+        "href": "#rfq"
+      },
+      {
+        "label": "cholla_chat@hotmail.com",
+        "href": "mailto:cholla_chat@hotmail.com"
+      },
+      {
+        "label": "088-229-9088",
+        "href": "tel:+66882299088"
+      }
     ],
     "copyright": "CHP Rolling Engineering Limited Partnership. All rights reserved.",
     "tagline": "โซลูชันอุตสาหกรรมสั่งผลิตตามแบบ"

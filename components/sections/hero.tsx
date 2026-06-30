@@ -6,11 +6,7 @@ import { CheckCircle2, Factory } from "lucide-react";
 
 // TODO: [Phase 2 Hardening] - Replace generated imagery with real factory photos via next/image + AVIF.
 export function Hero() {
-  const { t, locale } = useLanguage();
-
-  const headline = locale === "en" ? t.hero.headlineControl : "หจก. ซีเอชพี โรลลิ่ง วิศวกรรม | ผู้เชี่ยวชาญด้านลูกกลิ้งรีดท่อ รีดเหล็ก และเครื่องจักรกลอุตสาหกรรมเฉพาะทาง";
-  const subtitle = locale === "en" ? t.hero.subtitle : "ออกแบบ ผลิต โมดิฟาย และซ่อมบำรุงครบวงจรตั้งแต่ต้นน้ำยันปลายน้ำ โดยทีมวิศวกรประสบการณ์สูง รองรับงานสเปกพิเศษ Made-to-Order 100% มั่นใจได้ในความแม่นยำและการส่งมอบไลน์ผลิตตรงเวลา";
-  const ctaPrimary = locale === "en" ? t.hero.ctaPrimary : "ส่งแบบ Drawing ประเมินราคาฟรี";
+  const { t } = useLanguage();
 
   return (
     <section
@@ -32,16 +28,16 @@ export function Hero() {
           </span>
 
           <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-text-primary sm:text-5xl lg:text-6xl">
-            {headline}
+            {t.hero.headlineControl}
           </h1>
 
           <p className="max-w-xl text-lg leading-relaxed text-text-secondary">
-            {subtitle}
+            {t.hero.subtitle}
           </p>
 
           {/* Highlights */}
           <ul className="flex flex-col gap-2">
-            {t.hero.highlights.map((item: any) => (
+            {t.hero.highlights.map((item) => (
               <li
                 key={item}
                 className="flex items-center gap-2.5 text-sm font-medium text-text-primary"
@@ -55,7 +51,7 @@ export function Hero() {
           {/* CTA buttons */}
           <div className="flex flex-col gap-3 pt-2 sm:flex-row">
             <a href="#rfq" className="btn-primary">
-              {ctaPrimary}
+              {t.hero.ctaPrimary}
             </a>
           </div>
         </div>

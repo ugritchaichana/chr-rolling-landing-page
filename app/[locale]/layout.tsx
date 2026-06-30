@@ -129,7 +129,7 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>
 }>) {
   const { locale } = await params
-  const initialLocale = (locale === 'th' || locale === 'en') ? locale : 'en'
+  const initialLocale = (locale === 'th' || locale === 'en') ? locale : 'th'
   const dictionary = initialLocale === 'th' ? th : en
 
   return (

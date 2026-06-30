@@ -12,7 +12,7 @@ export function TrustBar() {
       aria-label="Key metrics"
     >
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-px overflow-hidden px-4 sm:px-6 lg:grid-cols-4 lg:px-8">
-        {t.trustBar.items.map((stat: any) => (
+        {t.trustBar.items.map((stat) => (
           <div
             key={stat.label}
             className="flex flex-col items-center gap-1 px-4 py-8 text-center"
