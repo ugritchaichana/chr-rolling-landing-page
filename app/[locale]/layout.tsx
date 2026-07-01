@@ -174,7 +174,7 @@ export default async function RootLayout({
           }}
         />
       </head>
-      <body className="font-sans antialiased">
+      <body className="font-sans antialiased" suppressHydrationWarning>
         <SentryLoader />
         <LanguageProvider initialLocale={initialLocale as any} dictionary={dictionary}>
           <SplashScreen />
