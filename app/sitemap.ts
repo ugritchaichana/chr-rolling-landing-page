@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.chr-rolling.com";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://chp-rolling.com";
 
 const locales = ["th", "en"] as const;
 

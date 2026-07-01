@@ -26,21 +26,11 @@ export function BusinessOffice() {
               dangerouslySetInnerHTML={{ __html: dict.description1 }}
             />
             <p className="font-bold text-accent-blue mt-4">
-              "{dict.description2}"
+              {dict.description2}
             </p>
           </div>
 
-          <div className="mt-4">
-            <a
-              href="#" // Placeholder for Google Maps link
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-accent-blue py-4 px-6 text-lg font-bold text-white shadow-sm transition-all hover:bg-accent-blue-dark active:scale-95 sm:w-auto"
-            >
-              <MapPin className="h-6 w-6" />
-              {dict.googleMap}
-            </a>
-          </div>
+
         </div>
 
         <div className="relative">
