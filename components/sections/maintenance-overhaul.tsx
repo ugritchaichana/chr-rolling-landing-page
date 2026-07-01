@@ -43,7 +43,7 @@ export function MaintenanceOverhaul() {
               <div className="overflow-hidden">
                 <Image
                   src={images[i]}
-                  alt={item.title}
+                  alt={item.imageAlt || item.title}
                   width={600}
                   height={400}
                   className="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105"

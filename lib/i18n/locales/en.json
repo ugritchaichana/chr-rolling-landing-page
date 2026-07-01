@@ -269,15 +269,18 @@
     "items": [
       {
         "title": "Pipe Forming Roller",
-        "description": "Design, CNC turn, and form rollers for round and square tubes. We maintain exact profile geometries with micron-level precision to ensure smooth forming of steel and stainless steel, minimizing surface scratches."
+        "description": "Design, CNC turn, and form rollers for round and square tubes. We maintain exact profile geometries with micron-level precision to ensure smooth forming of steel and stainless steel, minimizing surface scratches.",
+        "imageAlt": "Steel pipe forming roller manufactured by CHP Rolling Engineering from Japanese JIS SKD11 steel"
       },
       {
         "title": "Roll Forming Dies",
-        "description": "Support complex structural geometries. High-resolution surface grinding ensures stable and consistent cross-sectional dimensions across your entire production line, virtually eliminating dimensional deviations."
+        "description": "Support complex structural geometries. High-resolution surface grinding ensures stable and consistent cross-sectional dimensions across your entire production line, virtually eliminating dimensional deviations.",
+        "imageAlt": "High precision custom roll forming dies for structural steel shape forming"
       },
       {
         "title": "Multi-Stage Rollers",
-        "description": "We calculate and engineer comprehensive rolling stages designed to integrate seamlessly with your existing machinery. This systematic approach ensures optimal metal forming without deformation."
+        "description": "We calculate and engineer comprehensive rolling stages designed to integrate seamlessly with your existing machinery. This systematic approach ensures optimal metal forming without deformation.",
+        "imageAlt": "JIS SKD11 multi-stage roll forming dies manufactured based on custom drawing"
       }
     ]
   },
@@ -288,7 +291,8 @@
     "items": [
       {
         "title": "Multi-Configuration Machine Stands",
-        "description": "Heavy-duty machine stands constructed with thick structural steel. Advanced mechanical design ensures symmetrical roller positioning, guaranteeing perfectly squared and highly accurate pipe dimensions."
+        "description": "Heavy-duty machine stands constructed with thick structural steel. Advanced mechanical design ensures symmetrical roller positioning, guaranteeing perfectly squared and highly accurate pipe dimensions.",
+        "imageAlt": "Custom hybrid 4-roll tube mill squeeze stand design by CHP Rolling Engineering"
       },
       {
         "title": "Heavy Duty Gear Transmission",
@@ -296,7 +300,8 @@
       },
       {
         "title": "Proven Modular Parts",
-        "description": "Proven in full-scale on-site commissioning. The shaft support, bearings, and shaft axis feature a modular design for easy assembly and disassembly, engineered to handle extreme mechanical stress and torque."
+        "description": "Proven in full-scale on-site commissioning. The shaft support, bearings, and shaft axis feature a modular design for easy assembly and disassembly, engineered to handle extreme mechanical stress and torque.",
+        "imageAlt": "High precision custom gear parts and modular shaft assemblies for roll forming machines"
       }
     ]
   },
@@ -307,15 +312,18 @@
     "items": [
       {
         "title": "Urgent On-Site Diagnostics",
-        "description": "Immediate diagnostic services for tolerance deviation. We conduct in-depth analysis of roller shafts and drive systems to precisely and rapidly resolve tube deformation issues."
+        "description": "Immediate diagnostic services for tolerance deviation. We conduct in-depth analysis of roller shafts and drive systems to precisely and rapidly resolve tube deformation issues.",
+        "imageAlt": "On-site diagnostic and repair service for industrial roll forming machinery by CHP Rolling Engineering"
       },
       {
         "title": "Modification & Upgrades",
-        "description": "Modify and upgrade existing machinery or production lines to accommodate new roller sizes and adjustable clearances, expanding your manufacturing capabilities without the need for new capital equipment."
+        "description": "Modify and upgrade existing machinery or production lines to accommodate new roller sizes and adjustable clearances, expanding your manufacturing capabilities without the need for new capital equipment.",
+        "imageAlt": "Mechanical modification of stainless steel pipe roll forming lines for factory automation"
       },
       {
         "title": "Complete System Overhaul",
-        "description": "Comprehensive dismantling, bearing replacement, and restoration of worn shafts. We re-grind all support stands to completely overhaul your production line, restoring micron-level operational accuracy."
+        "description": "Comprehensive dismantling, bearing replacement, and restoration of worn shafts. We re-grind all support stands to completely overhaul your production line, restoring micron-level operational accuracy.",
+        "imageAlt": "Complete overhaul and machine rebuilding service for heavy-duty industrial roll forming machinery at CHP factory"
       }
     ]
   },
@@ -332,6 +340,7 @@
       "phoneValue": "088-229-9088",
       "emailValue": "cholla_chat@hotmail.com"
     },
-    "googleMap": "Google Map Navigation"
+    "googleMap": "Google Map Navigation",
+    "imageAlt": "CHP Rolling Engineering business office for custom drawing review and project consultation"
   }
 }
