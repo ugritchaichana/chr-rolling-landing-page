@@ -28,62 +28,60 @@ export function CustomMachineConstruction() {
           />
         </div>
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-2">
-          <article className="group flex flex-col overflow-hidden rounded-2xl border border-border-light bg-bg-primary shadow-card transition-all hover:shadow-card-hover">
-            <div className="overflow-hidden">
+        <div className="mt-16 flex flex-col lg:flex-row gap-12 items-center">
+          {/* Large Product Image Group */}
+          <div className="w-full lg:w-1/2 relative flex justify-center p-4 mb-8 lg:mb-0">
+            <div className="relative w-full">
               <Image
                 src="/images/Product/Machine/custom-roll-forming-01.webp"
-                alt={dict.items[0].imageAlt || "ออกแบบเครื่องจักรรีดท่อ หจก ซีเอชพี โรลลิ่ง วิศวกรรม เครื่องรีดขึ้นรูปท่อระบบ Hybrid 4-Roll type Squeeze"}
-                width={800}
-                height={500}
-                className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                alt={dict.items[0].imageAlt || "ออกแบบเครื่องจักรรีดท่อ หจก ซีเอชพี โรลลิ่ง วิศวกรรม"}
+                width={1000}
+                height={800}
+                className="w-full h-auto rounded-xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] ring-1 ring-border-light/50"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
+              {/* Floating Secondary Image (Bottom Right) */}
+              <div className="absolute -bottom-8 -right-4 lg:-right-8 w-2/5 max-w-[280px] rounded-xl overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.25)] ring-[6px] ring-bg-primary bg-bg-primary">
+                <Image
+                  src="/images/Product/Machine/custom-steel-roller-Part.webp"
+                  alt={dict.items[2].imageAlt || "ชิ้นส่วนเครื่องจักรกล Modular Parts"}
+                  width={500}
+                  height={350}
+                  className="w-full h-auto object-cover"
+                  sizes="(max-width: 1024px) 40vw, 20vw"
+                />
+              </div>
             </div>
-            <div className="flex flex-1 flex-col gap-3 p-8">
-              <h3 className="text-2xl font-bold text-text-primary">
-                {dict.items[0].title}
-              </h3>
-              <p className="leading-relaxed text-text-secondary">
-                {dict.items[0].description}
-              </p>
-              <a
-                href="#rfq"
-                className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-semibold text-accent-blue transition-colors hover:text-accent-red"
-              >
-                {t.nav.cta}
-                <ArrowRight className="h-4 w-4" strokeWidth={2} />
-              </a>
-            </div>
-          </article>
+          </div>
 
-          <article className="group flex flex-col overflow-hidden rounded-2xl border border-border-light bg-bg-primary shadow-card transition-all hover:shadow-card-hover">
-            <div className="overflow-hidden">
-              <Image
-                src="/images/Product/Machine/custom-steel-roller-Part.webp"
-                alt={dict.items[2].imageAlt || "ชิ้นส่วนเครื่องจักรกล Modular Parts"}
-                width={800}
-                height={500}
-                className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-            <div className="flex flex-1 flex-col gap-3 p-8">
-              <h3 className="text-2xl font-bold text-text-primary">
-                {dict.items[2].title}
-              </h3>
-              <p className="leading-relaxed text-text-secondary">
-                {dict.items[2].description}
-              </p>
+          {/* Features List */}
+          <div className="w-full lg:w-1/2 flex flex-col gap-8">
+            {dict.items.map((item: any, index: number) => (
+              <div key={index} className="flex gap-4 group">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-bg-secondary text-accent-blue transition-colors group-hover:bg-accent-blue group-hover:text-white shadow-sm border border-border-light group-hover:border-accent-blue">
+                  <span className="text-xl font-bold">0{index + 1}</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-text-primary mb-2 transition-colors group-hover:text-accent-blue">
+                    {item.title}
+                  </h3>
+                  <p className="leading-relaxed text-text-secondary">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+            
+            <div className="pt-4">
               <a
                 href="#rfq"
-                className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-semibold text-accent-blue transition-colors hover:text-accent-red"
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-text-primary px-8 text-sm font-semibold text-bg-primary transition-all hover:bg-accent-blue hover:shadow-lg hover:shadow-accent-blue/25"
               >
                 {t.nav.cta}
                 <ArrowRight className="h-4 w-4" strokeWidth={2} />
               </a>
             </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>

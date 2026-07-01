@@ -49,7 +49,7 @@
         "imageAlt": "Stacked polished stainless steel custom rolling tools and forming rollers on a workshop pallet"
       },
       {
-        "title": "Machine Construction",
+        "title": "Machine Design & Construction",
         "description": "Complete roll-forming and tube mill machinery built from the ground up -- stands, drives, and tooling integrated into a ready-to-run line.",
         "image": "/images/rolling-mill.webp",
         "imageAlt": "Blue CHP roll-forming machine line with stainless steel rollers under assembly"
@@ -199,7 +199,7 @@
   "rfqForm": {
     "eyebrow": "Request a quote",
     "heading": "Send us your drawings -- get a quote in 48 hours",
-    "description": "Share your blueprints, specifications, or a sample part. Our engineering team will review your requirements and respond with a detailed, made-to-order proposal.",
+    "description": "Submit your blueprints, specifications, or a sample part. Our engineering team will review your requirements and respond with a detailed, made-to-order proposal.",
     "contactPhoneLabel": "Call us",
     "contactPhone": "088-229-9088",
     "contactEmailLabel": "Email",
@@ -286,8 +286,8 @@
   },
   "machineConstruction": {
     "eyebrow": "OFFER 2",
-    "heading": "Hybrid Tube Mill Machinery: 2, 3, and 4-Roll Systems",
-    "description": "Elevate your heavy industry production efficiency with our <strong>Hybrid Squeeze Stand</strong> technology. Engineered and manufactured to accommodate variable forming directions, it allows seamless switching between <strong>2-Roll, 3-Roll, and 4-Roll</strong> Squeeze Systems within a single structure. This innovation significantly reduces Capital Expenditure (<strong>CapEx</strong>) and maximizes floor space. Built with heavy-duty structural steel, it is custom-ready for integration into <strong>premium tube and pipe</strong> production lines.",
+    "heading": "Hybrid Tube Mill Machinery: Configurable up to 4-Roll Systems",
+    "description": "Elevate your heavy industry production efficiency with our <strong>Hybrid Squeeze Stand</strong> technology. Engineered and manufactured to accommodate variable forming directions, it allows seamless operation of <strong>up to 4-Roll</strong> Squeeze Systems within a single structure. This innovation significantly reduces Capital Expenditure (<strong>CapEx</strong>) and maximizes floor space. Built with heavy-duty structural steel, it is custom-ready for integration into <strong>premium tube and pipe</strong> production lines.",
     "items": [
       {
         "title": "Multi-Configuration Machine Stands",

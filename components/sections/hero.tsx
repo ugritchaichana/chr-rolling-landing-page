@@ -65,7 +65,7 @@ export function Hero() {
                 { src: "/images/Product/Machine/custom-steel-roller-tooling-04.webp", alt: "Custom steel roller tooling" },
                 { src: "/images/rolling-mill.webp", alt: "Rolling mill process" }
               ]}
-              className="h-full max-h-[560px] min-h-[560px] w-full"
+              className="w-full h-[320px] sm:h-[400px] lg:h-[560px]"
             />
           </div>
           {/* Floating "25+ years" badge */}

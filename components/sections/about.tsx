@@ -62,7 +62,7 @@ export function About() {
                   { src: "/images/cnc-lathe.webp", alt: "CNC Lathe manufacturing" },
                   { src: "/images/Product/Roller/steel-roller-01.webp", alt: "Steel roller products" }
                 ]}
-                className="h-full max-h-[520px] min-h-[520px] w-full"
+                className="w-full h-[320px] sm:h-[400px] lg:h-[520px]"
               />
             </div>
           </div>
