@@ -1,9 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/lib/i18n";
-
 import { ShieldCheck, Gauge, Users } from "lucide-react";
+import { ImageCarousel } from "@/components/ui/image-carousel";
 
 const POINT_ICONS = [
   <ShieldCheck key="shield" className="h-5 w-5" strokeWidth={1.5} />,
@@ -57,13 +56,13 @@ export function About() {
           {/* Image */}
           <div className="relative">
             <div className="overflow-hidden rounded-2xl border border-border-light shadow-card">
-              <Image
-                src="/images/machined-dies.webp"
-                alt="Precision CNC machined rollers for tube mill machinery"
-                width={1100}
-                height={1400}
-                className="h-full max-h-[520px] w-full object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+              <ImageCarousel
+                images={[
+                  { src: "/images/machined-dies.webp", alt: "Precision CNC machined rollers for tube mill machinery" },
+                  { src: "/images/cnc-lathe.webp", alt: "CNC Lathe manufacturing" },
+                  { src: "/images/Product/Roller/steel-roller-01.webp", alt: "Steel roller products" }
+                ]}
+                className="h-full max-h-[520px] min-h-[520px] w-full"
               />
             </div>
           </div>

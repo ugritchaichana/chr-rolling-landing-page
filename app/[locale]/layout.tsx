@@ -88,10 +88,10 @@ const JSON_LD_ORGANIZATION = {
   "@type": "Organization",
   name: "CHP Rolling Engineering Co., Ltd.",
   alternateName: "บริษัท ซีเอชพี โรลลิ่ง วิศวกรรม จำกัด",
-  url: "https://chprolling.co.th",
+  url: "https://chp-rolling.com",
   description:
     "ผู้เชี่ยวชาญด้านการผลิตลูกกลิ้งอุตสาหกรรม ชิ้นส่วนเครื่องจักร และงาน CNC",
-  email: "info@chprolling.co.th",
+  email: "cholla_chat@hotmail.com",
   telephone: "+66882299088",
   address: {
     "@type": "PostalAddress",
@@ -134,7 +134,6 @@ const JSON_LD_FAQ = {
 }
 
 import { SentryLoader } from '../SentryLoader'
-import { SplashScreen } from '@/components/layout/splash-screen'
 import { SiteHeader } from '@/components/layout/site-header'
 import { SiteFooter } from '@/components/layout/site-footer'
 
@@ -177,7 +176,6 @@ export default async function RootLayout({
       <body className="font-sans antialiased" suppressHydrationWarning>
         <SentryLoader />
         <LanguageProvider initialLocale={initialLocale as any} dictionary={dictionary}>
-          <SplashScreen />
           <div className="min-h-screen bg-background text-foreground flex flex-col">
             <SiteHeader />
             <main className="flex-1">{children}</main>

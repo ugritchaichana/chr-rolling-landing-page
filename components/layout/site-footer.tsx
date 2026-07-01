@@ -28,8 +28,8 @@ export function SiteFooter() {
       heading: t.footer.contactHeading,
       links: [
         { label: t.footer.contactLinks[0].label, href: `/${locale}/contact` },
-        { label: t.footer.contactLinks[1].label, href: "mailto:sales@chprolling.com" },
-        { label: t.footer.contactLinks[2].label, href: "tel:+6620000000" },
+        { label: t.footer.contactLinks[1].label, href: "mailto:cholla_chat@hotmail.com" },
+        { label: t.footer.contactLinks[2].label, href: "tel:+66882299088" },
       ],
     },
   ]

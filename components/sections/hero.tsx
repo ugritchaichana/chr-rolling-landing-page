@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/lib/i18n";
 import { CheckCircle2, Factory } from "lucide-react";
+import { ImageCarousel } from "@/components/ui/image-carousel";
 
 // TODO: [Phase 2 Hardening] - Replace generated imagery with real factory photos via next/image + AVIF.
 export function Hero() {
@@ -59,16 +59,13 @@ export function Hero() {
         {/* Right: hero image */}
         <div className="relative">
           <div className="overflow-hidden rounded-2xl border border-border-light bg-bg-surface shadow-card-hover">
-            <Image
-              src="/images/Machine/chp-industrial-rolling-machine-01.webp"
-              alt="เครื่องกลึง CNC ขนาดใหญ่ในโรงงาน หจก ซีเอชพี โรลลิ่ง วิศวกรรม กระบวนการผลิตลูกกลิ้งรีดสเปกพิเศษความแม่นยำสูง"
-              width={1100}
-              height={1400}
-              priority
-              fetchPriority="high"
-              loading="eager"
-              className="h-full max-h-[560px] w-full object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+            <ImageCarousel
+              images={[
+                { src: "/images/Machine/chp-industrial-rolling-machine-01.webp", alt: "เครื่องกลึง CNC ขนาดใหญ่ในโรงงาน หจก ซีเอชพี โรลลิ่ง วิศวกรรม" },
+                { src: "/images/Product/Machine/custom-steel-roller-tooling-04.webp", alt: "Custom steel roller tooling" },
+                { src: "/images/rolling-mill.webp", alt: "Rolling mill process" }
+              ]}
+              className="h-full max-h-[560px] min-h-[560px] w-full"
             />
           </div>
           {/* Floating "25+ years" badge */}
