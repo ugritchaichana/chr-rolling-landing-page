@@ -47,10 +47,11 @@ export function BusinessOffice() {
           <div className="overflow-hidden rounded-2xl border border-border-light bg-white shadow-card">
             <Image
               src="/images/mockup-business-office.png"
-              alt="สำนักงานติดต่อ หจก ซีเอชพี โรลลิ่ง วิศวกรรม สถานที่นัดพบเจรจาธุรกิจและวิเคราะห์แบบ Drawing โรงงาน"
+              alt={dict.imageAlt || "สำนักงานติดต่อ หจก ซีเอชพี โรลลิ่ง วิศวกรรม สถานที่นัดพบเจรจาธุรกิจและวิเคราะห์แบบ Drawing โรงงาน"}
               width={800}
               height={600}
               className="h-[400px] w-full object-cover transition-transform duration-500 hover:scale-105"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
         </div>

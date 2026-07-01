@@ -1,0 +1,346 @@
+{
+  "nav": {
+    "home": "Home",
+    "capabilities": "Capabilities",
+    "process": "Process",
+    "industries": "Industries",
+    "about": "About",
+    "references": "Projects",
+    "contact": "Contact",
+    "cta": "Request a Quote"
+  },
+  "hero": {
+    "badge": "Custom Roll Forming & Tooling Experts",
+    "headlineControl": "Custom Roll Forming Tooling & Tube Mill Rolls",
+    "headlineIndustrial": "Precision rolling tools built to your drawings",
+    "subtitle": "Expert engineering, CNC machining, and overhaul services for precision roll forming tooling and tube mill machinery. Built to your exact drawings and tolerances, from a single custom roller to complete production lines.",
+    "highlights": [
+      "Reverse Engineering & Custom Tooling",
+      "Precision CNC Machining & Overhaul",
+      "Complete Tube Mills & Roll Forming Lines"
+    ],
+    "ctaPrimary": "Request a Quote",
+    "ctaSecondary": "Explore Capabilities",
+    "yearsValue": "25+",
+    "yearsLabel": "Years of Proven Expertise",
+    "stats": {
+      "experience": { "value": "15+", "label": "Years of Experience" },
+      "projects": { "value": "500+", "label": "Projects Delivered" },
+      "clients": { "value": "50+", "label": "Government & Private Clients" }
+    }
+  },
+  "trustBar": {
+    "items": [
+      { "value": "100%", "label": "Custom made-to-order" },
+      { "value": "+/-0.01mm", "label": "Machining tolerance" },
+      { "value": "48h", "label": "Quote turnaround" },
+      { "value": "ISO", "label": "Quality processes" }
+    ]
+  },
+  "capabilities": {
+    "eyebrow": "What we do",
+    "heading": "Engineering capabilities, built around your drawings",
+    "subheading": "Three core services that take your project from <strong>concept</strong> to a <strong>running production line</strong>.",
+    "items": [
+      {
+        "title": "Custom Rolling Tools",
+        "description": "Precision-machined rollers, dies, and forming tools cut to your profile and material, finished to mirror tolerance for tube and pipe mills.",
+        "image": "/images/rolling-tools.webp",
+        "imageAlt": "Stacked polished stainless steel custom rolling tools and forming rollers on a workshop pallet"
+      },
+      {
+        "title": "Machine Construction",
+        "description": "Complete roll-forming and tube mill machinery built from the ground up -- stands, drives, and tooling integrated into a ready-to-run line.",
+        "image": "/images/rolling-mill.webp",
+        "imageAlt": "Blue CHP roll-forming machine line with stainless steel rollers under assembly"
+      },
+      {
+        "title": "Modification & Overhaul",
+        "description": "Re-machining, refurbishment, and upgrades that restore worn tooling and ageing lines to original spec -- extending the life of your equipment.",
+        "image": "/images/machined-dies.webp",
+        "imageAlt": "Array of machined steel rolling dies and bearing rings ready for overhaul"
+      }
+    ],
+    "cta": "Discuss your project"
+  },
+  "process": {
+    "eyebrow": "How it works",
+    "heading": "A clear path from drawing to delivery",
+    "subheading": "A <strong>transparent</strong>, <strong>engineer-led</strong> workflow that keeps procurement teams informed <strong>at every stage</strong>.",
+    "steps": [
+      {
+        "title": "Submit drawings",
+        "description": "Send blueprints, samples, or a worn part. Our engineers review feasibility and confirm materials."
+      },
+      {
+        "title": "Design & quote",
+        "description": "We reverse-engineer or design from scratch, then return a detailed quote within 48 hours."
+      },
+      {
+        "title": "CNC manufacturing",
+        "description": "In-house turning, milling, grinding, and finishing on calibrated CNC machinery to tight tolerance."
+      },
+      {
+        "title": "Inspect & deliver",
+        "description": "Every piece is dimensionally inspected and finish-checked before packing and dispatch."
+      }
+    ]
+  },
+  "industries": {
+    "eyebrow": "Industries served",
+    "heading": "Trusted by manufacturers who form steel every day",
+    "subheading": "Wherever metal is rolled, formed, or shaped, our tooling keeps the <strong>line running</strong>. We supply <strong>OEMs</strong> and production facilities across a broad range of sectors.",
+    "items": [
+      "Steel tube & pipe mills",
+      "Roll-forming & profile lines",
+      "Stainless steel fabrication",
+      "Furniture & frame tubing",
+      "Automotive components",
+      "Construction & scaffolding",
+      "HVAC & ducting",
+      "Agricultural equipment"
+    ]
+  },
+  "about": {
+    "eyebrow": "About CHP",
+    "heading": "CHP Rolling Engineering Limited Partnership",
+    "description": "We are a specialist rolling engineering workshop dedicated to <strong>custom</strong>, <strong>made-to-order</strong> solutions. Our team combines decades of hands-on forming experience with <strong>modern CNC</strong> manufacturing to build tooling and machinery that performs <strong>exactly as designed</strong>.",
+    "points": [
+      {
+        "title": "Engineer-led quality",
+        "description": "Documented inspection on every part, with materials and tolerances verified to your specification."
+      },
+      {
+        "title": "Precision finishing",
+        "description": "Mirror-finished, dimensionally accurate tooling that runs cleaner and lasts longer on the line."
+      },
+      {
+        "title": "Partnership approach",
+        "description": "We work directly with your procurement and engineering teams from first drawing to final delivery."
+      }
+    ]
+  },
+  "certifications": {
+    "heading": "Standards & Certifications",
+    "items": [
+      { "code": "TIS / TISI", "label": "Thai Industrial Standards Institute" },
+      { "code": "ISO 9001:2015", "label": "Quality Management System" },
+      { "code": "ISO 14001:2015", "label": "Environmental Management System" }
+    ]
+  },
+  "specs": {
+    "heading": "Technical Specifications",
+    "subheading": "Technical data for industrial rollers and machine parts. Every piece is quality inspected to standards.",
+    "tableHeaders": { "item": "Specification", "value": "Value / Range" },
+    "rows": [
+      { "label": "Diameter", "value": "50 - 1,200 mm" },
+      { "label": "Maximum Length", "value": "6,000 mm" },
+      { "label": "Materials", "value": "SCM440, S45C, SUS304, SUS316" },
+      { "label": "Hardness", "value": "HRC 45-62" },
+      { "label": "Surface Roughness (Ra)", "value": "0.4 - 3.2 um" },
+      { "label": "Tolerance", "value": "+/- 0.01 mm" },
+      { "label": "Production Capacity", "value": "500+ pcs/month" },
+      { "label": "Lead Time", "value": "7-30 business days" }
+    ]
+  },
+  "inlineCta": {
+    "heading": "Ready to Start Your Project?",
+    "subheading": "Our engineering team is ready to consult and provide a quote within 24 hours.",
+    "cta": "Get a Quote"
+  },
+  "references": {
+    "heading": "Project References",
+    "subheading": "Trusted by leading government and private organizations.",
+    "filterAll": "All",
+    "filterB2G": "Government (B2G)",
+    "filterB2B": "Private Sector (B2B)",
+    "segmentLabelB2G": "Government",
+    "segmentLabelB2B": "Private",
+    "yearLabel": "Project Year",
+    "projects": [
+      {
+        "name": "Electricity Generating Authority of Thailand (EGAT)",
+        "segment": "b2g",
+        "work": "Coal conveyor belt rollers",
+        "year": "2024"
+      },
+      {
+        "name": "Provincial Waterworks Authority",
+        "segment": "b2g",
+        "work": "Stainless steel SUS316 pump shafts",
+        "year": "2023"
+      },
+      {
+        "name": "Siam Cement Group (SCG)",
+        "segment": "b2b",
+        "work": "Cement kiln rollers",
+        "year": "2024"
+      },
+      {
+        "name": "Thai Union Group PCL.",
+        "segment": "b2b",
+        "work": "Stainless steel SUS304 food production line parts",
+        "year": "2022"
+      },
+      {
+        "name": "Royal Irrigation Department",
+        "segment": "b2g",
+        "work": "Sluice gate shafts and gears",
+        "year": "2023"
+      },
+      {
+        "name": "Sahaviriya Steel Industries PCL.",
+        "segment": "b2b",
+        "work": "SCM440 steel rolling rollers",
+        "year": "2024"
+      }
+    ]
+  },
+  "rfqForm": {
+    "eyebrow": "Request a quote",
+    "heading": "Send us your drawings -- get a quote in 48 hours",
+    "description": "Share your blueprints, specifications, or a sample part. Our engineering team will review your requirements and respond with a detailed, made-to-order proposal.",
+    "contactPhoneLabel": "Call us",
+    "contactPhone": "088-229-9088",
+    "contactEmailLabel": "Email",
+    "contactEmail": "cholla_chat@hotmail.com",
+    "contactLocationLabel": "Workshop",
+    "contactLocation": "Samut Prakan, Thailand",
+    "fields": {
+      "name": { "label": "Full name", "placeholder": "Jane Engineer" },
+      "company": { "label": "Company", "placeholder": "Acme Steel Co." },
+      "email": { "label": "Work email", "placeholder": "jane@acmesteel.com" },
+      "phone": { "label": "Phone", "placeholder": "+66 ..." },
+      "service": {
+        "label": "Service needed",
+        "placeholder": "Select a service",
+        "options": [
+          "Custom Rolling Tools",
+          "Machine Construction",
+          "Modification & Overhaul",
+          "Other / Not sure"
+        ]
+      },
+      "details": {
+        "label": "Project details",
+        "placeholder": "Describe the part, quantity, material, dimensions, and any reference drawings."
+      },
+      "file": {
+        "label": "Attach blueprints or drawings (PDF, DWG, STEP)"
+      }
+    },
+    "submit": "Submit request",
+    "submitting": "Submitting...",
+    "privacy": "We respect your confidentiality. Drawings are used only to prepare your quote.",
+    "success": {
+      "heading": "Thank you",
+      "message": "Your request has been received. Our engineering team will get back to you within two business days.",
+      "another": "Submit another request"
+    },
+    "error": "An error occurred. Please try again."
+  },
+  "footer": {
+    "description": "CHP Rolling Engineering Limited Partnership — 100% custom, made-to-order rolling tools, machinery, and overhaul services for steel forming lines.",
+    "capabilitiesHeading": "Capabilities",
+    "capabilitiesLinks": [
+      "Custom Rolling Tools",
+      "Machine Construction",
+      "Modification & Overhaul"
+    ],
+    "companyHeading": "Company",
+    "companyLinks": [
+      { "label": "About CHP", "href": "#about" },
+      { "label": "Process", "href": "#process" },
+      { "label": "Industries", "href": "#industries" }
+    ],
+    "contactHeading": "Contact",
+    "contactLinks": [
+      { "label": "Request a Quote", "href": "#rfq" },
+      { "label": "cholla_chat@hotmail.com", "href": "mailto:cholla_chat@hotmail.com" },
+      { "label": "088-229-9088", "href": "tel:+66882299088" }
+    ],
+    "copyright": "CHP Rolling Engineering Limited Partnership. All rights reserved.",
+    "tagline": "Made-to-order industrial solutions"
+  },
+  "customRollingTools": {
+    "eyebrow": "OFFER 1",
+    "heading": "Custom-Made Pipe & Tube Roll Forming Tooling",
+    "description": "We deliver engineered solutions to solve problems caused by off-spec imported rollers and machinery limitations. By utilizing high-quality Japanese <strong>JIS SKD11</strong> Tool Steel, processed with high-pressure <strong>hardening</strong> and high-precision <strong>CNC grinding</strong>, we achieve the <strong>tightest tolerances</strong>. This guarantees extended tooling lifespan and long-term reduction in <strong>maintenance costs</strong>.",
+    "items": [
+      {
+        "title": "Pipe Forming Roller",
+        "description": "Design, CNC turn, and form rollers for round and square tubes. We maintain exact profile geometries with micron-level precision to ensure smooth forming of steel and stainless steel, minimizing surface scratches.",
+        "imageAlt": "Steel pipe forming roller manufactured by CHP Rolling Engineering from Japanese JIS SKD11 steel"
+      },
+      {
+        "title": "Roll Forming Dies",
+        "description": "Support complex structural geometries. High-resolution surface grinding ensures stable and consistent cross-sectional dimensions across your entire production line, virtually eliminating dimensional deviations.",
+        "imageAlt": "High precision custom roll forming dies for structural steel shape forming"
+      },
+      {
+        "title": "Multi-Stage Rollers",
+        "description": "We calculate and engineer comprehensive rolling stages designed to integrate seamlessly with your existing machinery. This systematic approach ensures optimal metal forming without deformation.",
+        "imageAlt": "JIS SKD11 multi-stage roll forming dies manufactured based on custom drawing"
+      }
+    ]
+  },
+  "machineConstruction": {
+    "eyebrow": "OFFER 2",
+    "heading": "Hybrid Tube Mill Machinery: 2, 3, and 4-Roll Systems",
+    "description": "Elevate your heavy industry production efficiency with our <strong>Hybrid Squeeze Stand</strong> technology. Engineered and manufactured to accommodate variable forming directions, it allows seamless switching between <strong>2-Roll, 3-Roll, and 4-Roll</strong> Squeeze Systems within a single structure. This innovation significantly reduces Capital Expenditure (<strong>CapEx</strong>) and maximizes floor space. Built with heavy-duty structural steel, it is custom-ready for integration into <strong>premium tube and pipe</strong> production lines.",
+    "items": [
+      {
+        "title": "Multi-Configuration Machine Stands",
+        "description": "Heavy-duty machine stands constructed with thick structural steel. Advanced mechanical design ensures symmetrical roller positioning, guaranteeing perfectly squared and highly accurate pipe dimensions.",
+        "imageAlt": "Custom hybrid 4-roll tube mill squeeze stand design by CHP Rolling Engineering"
+      },
+      {
+        "title": "Heavy Duty Gear Transmission",
+        "description": "High-torque multi-stage gear transmission systems designed to withstand heavy-load compression. Integrates seamlessly with advanced PLC logic controllers for reliable continuous operation."
+      },
+      {
+        "title": "Proven Modular Parts",
+        "description": "Proven in full-scale on-site commissioning. The shaft support, bearings, and shaft axis feature a modular design for easy assembly and disassembly, engineered to handle extreme mechanical stress and torque.",
+        "imageAlt": "High precision custom gear parts and modular shaft assemblies for roll forming machines"
+      }
+    ]
+  },
+  "maintenanceOverhaul": {
+    "eyebrow": "OFFER 3",
+    "heading": "Comprehensive Overhaul & Maintenance for Roll Forming Machinery",
+    "description": "Minimize risk and financial loss from machinery <strong>downtime</strong> and parts scarcity. Our expert engineering team provides rigorous <strong>on-site</strong> mechanical and hydraulic system diagnostics. We design and manufacture <strong>Custom Parts</strong> to replace worn components. We specialize in maintenance, capability expansion (<strong>Modification</strong>), and complete system restoration (<strong>Overhaul</strong>) for all production lines—including proprietary systems and imported machinery (China, Taiwan, Europe)—restoring them to <strong>peak operational performance</strong>.",
+    "items": [
+      {
+        "title": "Urgent On-Site Diagnostics",
+        "description": "Immediate diagnostic services for tolerance deviation. We conduct in-depth analysis of roller shafts and drive systems to precisely and rapidly resolve tube deformation issues.",
+        "imageAlt": "On-site diagnostic and repair service for industrial roll forming machinery by CHP Rolling Engineering"
+      },
+      {
+        "title": "Modification & Upgrades",
+        "description": "Modify and upgrade existing machinery or production lines to accommodate new roller sizes and adjustable clearances, expanding your manufacturing capabilities without the need for new capital equipment.",
+        "imageAlt": "Mechanical modification of stainless steel pipe roll forming lines for factory automation"
+      },
+      {
+        "title": "Complete System Overhaul",
+        "description": "Comprehensive dismantling, bearing replacement, and restoration of worn shafts. We re-grind all support stands to completely overhaul your production line, restoring micron-level operational accuracy.",
+        "imageAlt": "Complete overhaul and machine rebuilding service for heavy-duty industrial roll forming machinery at CHP factory"
+      }
+    ]
+  },
+  "businessOffice": {
+    "eyebrow": "OFFER 4",
+    "heading": "Business Office & Deep Engineering Coordination Center",
+    "description1": "Because specialized engineering and <strong>custom-made</strong> manufacturing require <strong>absolute precision</strong>, CHP Rolling Engineering has established a dedicated <strong>Business Office</strong> for seamless coordination with our partners' procurement and engineering teams. This space is designed for intensive meetings, <strong>mechanical drawing</strong> analysis, and meticulous material specification reviews, ensuring <strong>100% alignment</strong> and accuracy before entering actual production.",
+    "description2": "We are committed to delivering precise engineering solutions that maximize the return on every investment you make.",
+    "contactInfo": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "addressValue": "790/77 Moo 2, Soi Pracha Uthit 90, Pracha Uthit Rd., Ban Khlong Suan, Phra Samut Chedi, Samut Prakan 10290",
+      "phoneValue": "088-229-9088",
+      "emailValue": "cholla_chat@hotmail.com"
+    },
+    "googleMap": "Google Map Navigation",
+    "imageAlt": "CHP Rolling Engineering business office for custom drawing review and project consultation"
+  }
+}

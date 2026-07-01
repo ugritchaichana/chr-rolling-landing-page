@@ -33,10 +33,11 @@ export function CustomMachineConstruction() {
             <div className="overflow-hidden">
               <Image
                 src="/images/Product/Machine/custom-roll-forming-01.webp"
-                alt="ออกแบบเครื่องจักรรีดท่อ หจก ซีเอชพี โรลลิ่ง วิศวกรรม เครื่องรีดขึ้นรูปท่อระบบ Hybrid 4-Roll type Squeeze"
+                alt={dict.items[0].imageAlt || "ออกแบบเครื่องจักรรีดท่อ หจก ซีเอชพี โรลลิ่ง วิศวกรรม เครื่องรีดขึ้นรูปท่อระบบ Hybrid 4-Roll type Squeeze"}
                 width={800}
                 height={500}
                 className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
             <div className="flex flex-1 flex-col gap-3 p-8">
@@ -60,10 +61,11 @@ export function CustomMachineConstruction() {
             <div className="overflow-hidden">
               <Image
                 src="/images/Product/Machine/custom-steel-roller-Part.webp"
-                alt="ชิ้นส่วนเครื่องจักรกล Modular Parts"
+                alt={dict.items[2].imageAlt || "ชิ้นส่วนเครื่องจักรกล Modular Parts"}
                 width={800}
                 height={500}
                 className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
             <div className="flex flex-1 flex-col gap-3 p-8">

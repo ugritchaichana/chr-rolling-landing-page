@@ -8,7 +8,14 @@ import {
   useEffect,
   type ReactNode,
 } from "react";
-import { dictionaries, type Dictionary, type Locale } from "./dictionaries";
+import { useRouter, usePathname } from "next/navigation";
+import type en from "./locales/en.json";
+
+/** Locale ที่รองรับ */
+export type Locale = "en" | "th";
+
+/** Type ที่ infer มาจากโครงสร้างของ en.json โดยตรง — ไม่ต้องเขียนเอง */
+export type Dictionary = typeof en;
 
 const LOCALE_COOKIE = "chp-locale";
 
@@ -20,47 +27,55 @@ interface LanguageContextValue {
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
-function getStoredLocale(): Locale {
-  if (typeof document === "undefined") return "en";
-  const match = document.cookie
-    .split("; ")
-    .find((c) => c.startsWith(`${LOCALE_COOKIE}=`));
-  const val = match?.split("=")[1];
-  if (val === "th" || val === "en") return val;
-  
-  // Fallback if cookie is missing on first client render
-  return navigator.language.toLowerCase().includes("th") ? "th" : "en";
-}
-
 function storeLocale(locale: Locale): void {
+  if (typeof document === "undefined") return;
   document.cookie = `${LOCALE_COOKIE}=${locale};path=/;max-age=${60 * 60 * 24 * 365};samesite=lax`;
 }
 
-export function LanguageProvider({ 
+export function LanguageProvider({
   children,
-  initialLocale = "en"
-}: { 
+  initialLocale = "th",
+  dictionary,
+}: {
   children: ReactNode;
   initialLocale?: Locale;
+  dictionary: Dictionary;
 }) {
+  const router = useRouter();
+  const pathname = usePathname();
   const [locale, setLocaleState] = useState<Locale>(initialLocale);
 
   useEffect(() => {
-    const stored = getStoredLocale();
-    if (stored !== initialLocale) {
-      setLocaleState(stored);
+    setLocaleState(initialLocale);
+    storeLocale(initialLocale);
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = initialLocale;
     }
   }, [initialLocale]);
 
   const setLocale = useCallback((newLocale: Locale) => {
     setLocaleState(newLocale);
     storeLocale(newLocale);
-    document.documentElement.lang = newLocale;
-  }, []);
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = newLocale;
+    }
+
+    const searchParams = typeof window !== "undefined" ? window.location.search : "";
+    const hash = typeof window !== "undefined" ? window.location.hash : "";
+
+    // Redirect to URL with updated locale prefix
+    let newPath = pathname;
+    if (pathname.startsWith("/en") || pathname.startsWith("/th")) {
+      newPath = pathname.replace(/^\/(en|th)(\/|$)/, `/${newLocale}$2`);
+    } else {
+      newPath = `/${newLocale}${pathname}`;
+    }
+    router.push(`${newPath}${searchParams}${hash}`);
+  }, [pathname, router]);
 
   const value: LanguageContextValue = {
     locale,
-    t: dictionaries[locale],
+    t: dictionary,
     setLocale,
   };
 
