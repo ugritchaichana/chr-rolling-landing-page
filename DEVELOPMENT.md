@@ -79,3 +79,17 @@ bash vercel-ignore-build.sh
     ```bash
     pnpm test:run
     ```
+
+---
+
+## 🌐 5. การจัดการภาษา (Internationalization / i18n Policy)
+
+เพื่อรองรับผู้ใช้งานทั้งภาษาไทยและต่างประเทศ โปรเจกต์นี้มีนโยบายการเลือกภาษาเริ่มต้น (Default Locale) ดังนี้ (ตัดสินใจเลือก **Option B** ตาม Issue #21):
+
+*   **ลำดับความสำคัญในการเลือกภาษา (Locale Resolution Priority)**:
+    1.  **Cookie**: ตรวจสอบคุกกี้ `chp-locale` หากมีค่าเป็น `en` หรือ `th` จะใช้ภาษานั้นทันที
+    2.  **Accept-Language (Thai)**: ตรวจสอบ Accept-Language Header ของเบราว์เซอร์ หากมีส่วนเกี่ยวข้องกับภาษาไทย (`th`) จะใช้ภาษาไทย `th`
+    3.  **Geo Location**: ตรวจสอบตำแหน่งประเทศผ่าน Header ของ Vercel (`x-vercel-ip-country`) หากมาจากประเทศไทย (`TH`) จะใช้ภาษาไทย `th`
+    4.  **Accept-Language (English)**: หากไม่มีสัญญาณข้างต้น แต่การตั้งค่าเบราว์เซอร์ขึ้นต้นด้วยภาษาอังกฤษ (`en`) เช่น `en-US` หรือ `en` จะใช้ภาษาอังกฤษ `en`
+    5.  **Default Fallback**: หากไม่พบคุกกี้หรือการตั้งค่าใด ๆ เลย ระบบจะย้อนกลับไปใช้ภาษาไทย (`th`) เป็นค่าเริ่มต้น (Default Locale)
+

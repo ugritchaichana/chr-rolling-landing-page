@@ -4,7 +4,7 @@ import type { NextRequest } from 'next/server'
 const locales = ['en', 'th']
 const defaultLocale = 'th'
 
-function getLocale(request: NextRequest): string {
+export function getLocale(request: NextRequest): string {
   // Check cookie
   const cookieLocale = request.cookies.get('chp-locale')?.value
   if (cookieLocale && locales.includes(cookieLocale)) {
@@ -21,6 +21,14 @@ function getLocale(request: NextRequest): string {
   const country = request.headers.get('x-vercel-ip-country') || ''
   if (country === 'TH') {
     return 'th'
+  }
+  if (country !== '') {
+    return 'en'
+  }
+
+  // Check if browser prefers English (starts with 'en') before falling back to Thai
+  if (acceptLanguage && acceptLanguage.toLowerCase().startsWith('en')) {
+    return 'en'
   }
 
   return defaultLocale
